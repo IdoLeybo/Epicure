@@ -1,0 +1,349 @@
+/*
+    Theme Name: Epicure
+    Theme URI:
+    Author Name: Ido Leybovitch
+    Author URI:
+    Description: Theme for Epicure App
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/license/glp-2.0.html
+    Tags: restaurant, restaurants, mobile, responsive, chef
+    Text Domain: epicure
+ */
+
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.text-primary {
+    font-family: 'HelveticaNeue';
+}
+
+button {
+    cursor: pointer;
+}
+
+/** HEADER **/
+.site-header .container {
+    padding: 14px 0 5px 0;
+    width: 80%;
+    max-width: 1440px;
+    height: 53px;
+    background-color: #ffffff;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media (min-width: 992px) {
+    .site-header .container {
+        width: 80%;
+        padding: 14px 0 5px 0;
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .site-header .container {
+        justify-content: space-between;
+
+    }
+}
+
+@media (min-width: 475px) {
+    .site-header .container {
+        width: 90%;
+    }
+}
+
+.site-header .left-flex {
+    align-items: center;
+    display: flex;
+    width: 60%;
+    /*width: 100%;*/
+    /*position: relative;*/
+
+}
+
+@media (min-width: 768px) {
+    .site-header .left-flex {
+        position: unset;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+header div.header-menu {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    header div.header-menu {
+        display: block;
+    }
+}
+
+
+/** Responsive Menu Button **/
+.mobile-menu a {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 40px;
+    background: transparent;
+    display: block;
+    color: #000000;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*div.main-menu {*/
+/*    position: absolute;*/
+/*    left: 20px;*/
+/*    top: 19px;*/
+/*}*/
+
+div.navigation-menu {
+    width: 100vw;
+    height: 100vh;
+}
+
+div.navigation-menu {
+    position: absolute;
+}
+
+div.navigation-menu nav.site-nav {
+    background-color: rgba(243, 243, 243, 1);
+    width: 100%;
+    height: 100%;
+}
+
+div.navigation-menu nav.site-nav ul {
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+div.navigation-menu nav.site-nav ul li {
+    padding: 24px;
+}
+
+div.navigation-menu nav.site-nav ul li a {
+    font-family: 'HelveticaNeue';
+    font-size: 20px;
+
+}
+
+@media (min-width: 768px) {
+    .mobile-menu a {
+        display: none;
+    }
+
+    div.navigation-menu {
+        display: none;
+    }
+}
+/** **/
+
+nav .site-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+ nav .site-nav ul li.menu-item a {
+    text-decoration: none;
+     margin-right: 28px;
+     font-size: 18px;
+     font-weight: 100;
+}
+nav .site-nav ul li.menu-item:nth-child(1) a {
+    margin-left: 31px;
+}
+nav .site-nav ul li.menu-item:nth-last-child(1) a {
+    margin-right: 0;
+}
+.menu li a {
+    color: #000000;
+}
+
+div.logo {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: 768px) {
+    div.logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 992px) {
+    div.logo {
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media (max-width: 767px) {
+    div.logo {
+        justify-content: end;
+        width: 100%;
+    }
+}
+
+div.logo a div.header-title {
+    color: #000000;
+    font-size: 27px;
+    font-weight: 100;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    div.logo a div.header-title {
+        display: block;
+    }
+}
+
+img.logoimage {
+    width: 33px;
+    height: 33px;
+    margin-right: 28px;
+}
+
+.site-header .right-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .site-header .right-flex {
+        width: 40%;
+        justify-content: end;
+    }
+}
+
+div.user-fields-header {
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+}
+
+div.user-fields-header a:nth-child(1) {
+    margin-right: 28px;
+}
+
+div.search-field {
+    display: none;
+    align-items: center;
+    border: 1px solid #000000;
+    height: 37px;
+    width: 300px;
+    position: relative;
+    border-radius: 5px;
+    margin-left: 3px;
+}
+
+@media (min-width: 768px) {
+    div.search-field {
+        display: block;
+    }
+}
+
+div.search-field input {
+    width: 80%;
+    height: 34px;
+    border: none;
+    font-family: 'HelveticaNeue';
+    font-size: 18px;
+    font-weight: 100;
+    /*width: 80%;*/
+    /*height: 30px;*/
+    /*border: none;*/
+    /*font-family: 'HelveticaNeue';*/
+    /*font-size: 18px;*/
+    /*font-weight: 100;*/
+    /*padding: 2px 7px;*/
+    /*margin-top: 1px;*/
+}
+
+div.search-field button {
+    background: transparent;
+    border: none;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 13px;
+    top: 7px;
+}
+
+@media (min-width: 992px) {
+    div.search-field {
+        width: 415px;
+    }
+}
+
+div.shape-image-for-mobile {
+    align-items: center;
+    display: flex;
+}
+
+div.shape-image-for-mobile button {
+    background: transparent;
+    border: none;
+    width: 22px;
+    height: 22px;
+}
+
+@media (min-width: 768px) {
+    div.shape-image-for-mobile {
+        display: none;
+    }
+
+}
+
+/** FOOTER **/
+footer {
+    max-width: 1440px;
+    width: 100%;
+    height: 94px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div.footer-menu {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer div.footer-menu a {
+    color: #000000;
+    margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+    footer div.footer-menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer div.footer-menu a {
+        margin: 37px 45px 36px 0;
+    }
+}
+
+nav.header-nav {
+    position: relative;
+}
