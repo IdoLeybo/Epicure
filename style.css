@@ -10,15 +10,24 @@
     Tags: restaurant, restaurants, mobile, responsive, chef
     Text Domain: epicure
  */
+html {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
 }
+
 a {
     text-decoration: none;
 }
 .text-primary {
-    font-family: 'HelveticaNeue';
+    font-family: HelveticaNeue-Thin;
+    letter-spacing: 1.92px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 button {
@@ -86,6 +95,24 @@ header div.header-menu {
     }
 }
 
+@media (min-width: 768px) {
+    header nav.header-nav {
+        display: flex;
+        justify-content: space-between;
+        transition: all .5s ease;
+    }
+
+    header nav.fixed-top {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 1rem ;
+        background-color: #ffffff;
+        z-index: 10000;
+    }
+}
+
 
 /** Responsive Menu Button **/
 .mobile-menu a {
@@ -147,7 +174,7 @@ div.navigation-menu nav.site-nav ul li a {
     }
 
     div.navigation-menu {
-        display: none;
+        display: none!important;
     }
 }
 /** **/
@@ -156,20 +183,32 @@ nav .site-nav ul {
     list-style: none;
     display: flex;
     padding: 0;
+    margin-top: 1px;
+    margin-left: 30px;
+    margin-right: 3px;
+    margin-bottom: 0;
+    height: 45px;
+    text-align: center;
+    align-items: center;
+
 }
+
 
  nav .site-nav ul li.menu-item a {
     text-decoration: none;
      margin-right: 28px;
      font-size: 18px;
      font-weight: 100;
+     padding-bottom: 10px;
 }
-nav .site-nav ul li.menu-item:nth-child(1) a {
-    margin-left: 31px;
+nav .site-nav ul li.current_page_item a {
+    border-bottom: 2px solid rgba(222,146,0,0.9);
 }
+
 nav .site-nav ul li.menu-item:nth-last-child(1) a {
     margin-right: 0;
 }
+
 .menu li a {
     color: #000000;
 }
@@ -264,7 +303,7 @@ div.search-field input {
     width: 80%;
     height: 34px;
     border: none;
-    font-family: 'HelveticaNeue';
+    font-family: HelveticaNeue-Thin;
     font-size: 18px;
     font-weight: 100;
     /*width: 80%;*/
@@ -314,11 +353,11 @@ div.shape-image-for-mobile button {
 
 /** FOOTER **/
 footer {
-    max-width: 1440px;
     width: 100%;
     height: 94px;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 -1px 1px -1px rgba(0, 0, 0, 0.3);
 }
 
 footer div.footer-menu {
@@ -346,4 +385,203 @@ footer div.footer-menu a {
 
 nav.header-nav {
     position: relative;
+    border-bottom: solid 0.2px #979797;
+}
+
+/** RESTAURANTS PAGE **/
+.controllers {
+    margin: 52px auto;
+
+}
+
+@media (max-width: 404px) {
+    .controllers {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .controllers a {
+        margin-top: 20px;
+    }
+
+    .controllers a span {
+        font-size: 14px;
+        font-weight: 100;
+        color: #000000;
+    }
+}
+
+.controllers a span {
+    margin-right: 25px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #000000;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.restaurant-content {
+    box-sizing: border-box;
+    padding: 19px 19px;
+}
+
+.restaurant-content div.res-card {
+    background-color: #f9f4ea;
+    height: 339px;
+}
+
+.restaurant-content div.restaurant-details {
+    margin-top: 15px;
+}
+
+
+
+div.restaurant-details img.restaurant-image {
+    width: 375px;
+    height: 254px;
+}
+
+@media (min-width: 375px) {
+    div.restaurant-details img.restaurant-image {
+        width: 100%;
+        height: 396px;
+    }
+}
+
+@media (min-width: 768px) {
+    div.restaurant-details img.restaurant-image {
+        width: 1102px;
+    }
+}
+
+.restaurant-content div.restaurant-details h2 {
+    margin: 0 auto;
+    color: #000000;
+    font-size: 38px;
+    font-weight: normal;
+    letter-spacing: 2.53px;
+}
+
+.restaurant-content div.restaurant-details p {
+    font-size: 23.8px;
+    margin: 10px auto;
+    letter-spacing: 1.58px;
+    font-weight: 100;
+    font-stretch: normal;
+    color: #000000;
+    font-family: HelveticaNeue-Thin;
+}
+
+div.restaurant-details h1 {
+    font-size: 55px;
+    font-weight: normal;
+    letter-spacing: 3.67px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+div.restaurant-details p.chef-name {
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: HelveticaNeue-Thin;
+    letter-spacing: 2px;
+}
+
+div.restaurant-details p.time {
+    font-family: HelveticaNeue-Thin;
+    font-size: 18px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    margin: 0 0 0 9px;
+    letter-spacing: 1.2px;
+}
+
+.dish-controllers {
+    margin: 40px auto;
+}
+
+.dish-controllers a span {
+    font-size: 25.5px;
+    letter-spacing: 1.82px;
+    font-weight: 100;
+    font-family: HelveticaNeue-Thin;
+    color: #000000;
+    margin: 0 20px 6px 0;
+}
+
+@media (max-width: 404px) {
+    .dish-controllers {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .dish-controllers a {
+        margin-top: 20px;
+    }
+
+    .dish-controllers a span {
+        font-size: 14px;
+        font-weight: 100;
+        color: #000000;
+    }
+}
+
+div.dishes-content {
+    box-sizing: border-box;
+    width: 236px;
+    height: 413px;
+    text-align: center;
+    margin: 26.5px 20px;
+    background-color: rgba(232, 196, 122, 0.2);
+}
+
+div.dish-details h2 {
+    font-family: HelveticaNeue;
+    font-size: 22.5px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+div.dish-details p.details {
+    width: 165.5px;
+    height: 132px;
+    font-family: HelveticaNeue-Thin;
+    font-size: 19.5px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.31;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: #000000;
+    margin: 0 auto;
+}
+
+div.dish-details p.price {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-family: HelveticaNeue;
+    font-size: 21px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    color: #000000;
 }

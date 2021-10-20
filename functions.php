@@ -2,9 +2,14 @@
 
 // Add Setup
 function epicure_setup() {
+    add_theme_support('post-thumbnails');
+    add_image_size('restaurant_card',  342, 213, true);
+    add_image_size('restaurant',  1102, 396, true);
+    add_image_size('dish-card',  236, 150, true);
 
+    add_theme_support('title-tag');
 }
-add_action('init', 'epicure_setup');
+add_action('after_setup_theme', 'epicure_setup');
 
 // Add Menus
 function epicure_menus() {

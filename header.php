@@ -57,7 +57,7 @@
         </nav>
     </header>
 
-    <div class="navigation-menu">
+    <div class="navigation-menu" style="display: none">
         <?php
         $args = array(
             'theme_location' => 'header-menu',
