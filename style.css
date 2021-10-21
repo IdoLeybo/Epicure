@@ -389,27 +389,24 @@ nav.header-nav {
 }
 
 /** RESTAURANTS PAGE **/
-.controllers {
-    margin: 52px auto;
-
+@media (max-width: 767px) {
+    h1.res-header-title-mobile {
+        display: block!important;
+        font-size: 20px;
+        font-family: HelveticaNeue;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1.54px;
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
 }
 
-@media (max-width: 404px) {
-    .controllers {
-        display: flex;
-        flex-direction: column;
-        margin: 20px auto;
-    }
+.controllers {
+    margin: 40px auto;
 
-    .controllers a {
-        margin-top: 20px;
-    }
-
-    .controllers a span {
-        font-size: 14px;
-        font-weight: 100;
-        color: #000000;
-    }
 }
 
 .controllers a span {
@@ -417,6 +414,39 @@ nav.header-nav {
     font-size: 18px;
     font-weight: 100;
     color: #000000;
+}
+
+
+@media (max-width: 404px) {
+    .controllers {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px auto;
+    }
+
+    .controllers a {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .controllers a span {
+        font-size: 14px;
+        font-weight: 100;
+        color: #000000;
+        margin-right: 0;
+    }
+
+    .current-filter {
+        font-size: 16px;
+        font-weight: normal;
+
+    }
+}
+
+.current-filter {
+    font-size: 19px!important;
+    font-weight: 600!important;
+
 }
 
 .container-flex {
@@ -438,15 +468,14 @@ nav.header-nav {
     height: 339px;
 }
 
-.restaurant-content div.restaurant-details {
+    .restaurant-content div.restaurant-details {
     margin-top: 15px;
 }
-
-
 
 div.restaurant-details img.restaurant-image {
     width: 375px;
     height: 254px;
+    object-fit: cover;
 }
 
 @media (min-width: 375px) {
@@ -468,6 +497,7 @@ div.restaurant-details img.restaurant-image {
     font-size: 38px;
     font-weight: normal;
     letter-spacing: 2.53px;
+    font-family: HelveticaNeue;
 }
 
 .restaurant-content div.restaurant-details p {
@@ -480,12 +510,44 @@ div.restaurant-details img.restaurant-image {
     font-family: HelveticaNeue-Thin;
 }
 
+@media (max-width: 550px) {
+    .restaurant-content {
+        padding: 6.5px 6.5px;
+    }
+
+    .restaurant-content div.res-card {
+        width: 162px;
+        height: 190.5px;
+    }
+
+    .restaurant-content div.res-card img {
+        width: 162px;
+        height: 122px;
+    }
+
+    .restaurant-content div.restaurant-details h2 {
+        font-size: 17.2px;;
+    }
+
+    .restaurant-content div.restaurant-details p {
+        font-size: 13.3px;
+    }
+}
+
+@media (max-width: 800px) {
+    .restaurant-content div.res-card img {
+        width: 100%;
+
+    }
+}
+
 div.restaurant-details h1 {
     font-size: 55px;
     font-weight: normal;
     letter-spacing: 3.67px;
     margin-top: 20px;
     margin-bottom: 0;
+    font-family: HelveticaNeue;
 }
 
 div.restaurant-details p.chef-name {
@@ -505,6 +567,36 @@ div.restaurant-details p.time {
     letter-spacing: 1.2px;
 }
 
+@media (max-width: 450px) {
+    div.restaurant-details h1 {
+        margin: 17px 24px 1px 25px;
+        font-size: 35px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2.33px;
+    }
+
+    div.restaurant-details p.chef-name {
+        font-size: 24px;
+        font-weight: 100;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1.6px;
+    }
+
+    div.restaurant-details p.time {
+        font-size: 12px;
+        font-weight: 100;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.42;
+        letter-spacing: 0.8px;
+    }
+}
+
 .dish-controllers {
     margin: 40px auto;
 }
@@ -518,10 +610,11 @@ div.restaurant-details p.time {
     margin: 0 20px 6px 0;
 }
 
+
 @media (max-width: 404px) {
     .dish-controllers {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         margin: 20px auto;
     }
 
@@ -530,10 +623,16 @@ div.restaurant-details p.time {
     }
 
     .dish-controllers a span {
-        font-size: 14px;
+        font-size: 17px;
         font-weight: 100;
         color: #000000;
     }
+}
+
+.current-dish-filter {
+    border-bottom: 2px solid rgba(222,146,0,0.9);
+    opacity: 0.9;
+    padding-bottom: 4px;
 }
 
 div.dishes-content {
@@ -585,3 +684,124 @@ div.dish-details p.price {
     letter-spacing: 0.9px;
     color: #000000;
 }
+
+@media (max-width: 404px) {
+    div.dishes-content {
+        width: 157px;
+        height: 274px;
+        margin: 12px 10px;
+    }
+
+    div.dish-card img {
+        width: 157px;
+        height: 100px;
+    }
+
+    div.dish-details h2 {
+        font-size: 15px;
+    }
+
+    div.dish-details p.details {
+        font-size: 13px;
+        height: 70px;
+        width: 111px;
+    }
+
+    div.dish-details p.price {
+        font-size: 14px;
+    }
+}
+
+/** RESERVATION FORM **/
+input,
+textarea {
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 10px;
+}
+
+input[type="button"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input-group {
+    clear: both;
+    margin: 15px 0;
+    position: relative;
+}
+
+.input-group input[type='button'] {
+    background-color: #eeeeee;
+    min-width: 38px;
+    width: auto;
+    transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+    font-weight: bold;
+    height: 38px;
+    padding: 0;
+    width: 38px;
+    position: relative;
+}
+
+.input-group .quantity-field {
+    position: relative;
+    height: 38px;
+    left: -6px;
+    text-align: center;
+    width: 62px;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 0 5px;
+    resize: vertical;
+}
+
+.button-plus {
+    left: -13px;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+/** RESERVATION FORM **/
+.light-container-1 {
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,0.8589810924369747) 100%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%);
+    display: none;
+    float: left;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+#login {
+    height: 100vh;
+    display: block;
+}
+
+#login form {
+    margin: 10% auto;
+    height: 90vh;
+    text-align: center;
+    width: 608px;
+    background-color: #ffffff;
+}
+
+
+
+
+

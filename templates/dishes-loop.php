@@ -1,5 +1,6 @@
 <div class="dishes-content ">
-    <a href="<?php the_permalink(); ?>" >
+
+    <a href="#" class="exist">
         <div class="dish-card text-center">
             <?php the_post_thumbnail('dish-card'); ?>
             <div class="dish-details">
