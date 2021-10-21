@@ -7,11 +7,9 @@ jQuery(document).ready(function($) {
     const breakpoint = 768;
     $(window).resize(() => {
         if ($(document).width() >= breakpoint) {
-            // $('nav.site-nav').show()
             $('div.navigation-menu').hide()
             // $('div.navigation-menu').show()
         } else {
-            // $('nav.site-nav').hide()
             $('div.navigation-menu').hide()
 
         }
@@ -27,7 +25,7 @@ window.onscroll = () => {
 function fixedMenu(scroll) {
     const headerScroll = document.querySelector('.header-nav');
 
-    if(scroll > 280) {
+    if(scroll > 150) {
         headerScroll.classList.add('fixed-top');
     } else {
         headerScroll.classList.remove('fixed-top');
