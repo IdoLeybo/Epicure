@@ -1,11 +1,13 @@
 <div class="dishes-content ">
-
+<h2 class="name"> <?php the_field('restaurant_name'); ?></h2>
     <a href="#" class="exist">
         <div id="<?php echo get_post_field('post_name', get_post()) ?>" class=" dish-card text-center">
             <div class="<?php echo get_post_field('post_name', get_post()) ?>" style="display:none;">
                 <?php get_template_part('templates/reservation', 'form'); ?>
             </div>
-            <?php the_post_thumbnail('dish-card'); ?>
+            <div class="thumbnail-image">
+                <?php the_post_thumbnail('dish-card'); ?>
+            </div>
             <div class="dish-details">
                 <h2 class="text-primary"><?php the_title(); ?></h2>
                 <p class="text-primary details"> <?php the_field('details'); ?></p>
