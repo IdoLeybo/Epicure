@@ -1,9 +1,13 @@
 <?php
 
+require get_template_directory() . '/inc/database.php';
+require get_template_directory() . '/inc/db_reservation.php';
+
 // Add Setup
 function epicure_setup() {
     add_theme_support('post-thumbnails');
     add_image_size('restaurant_card',  342, 213, true);
+    add_image_size('restaurant_card_mobile',  162, 122, true);
     add_image_size('restaurant',  1102, 396, true);
     add_image_size('dish-card',  236, 150, true);
 
@@ -33,9 +37,15 @@ function epicure_scripts() {
 
     //Register Scripts
     wp_register_script('script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
+    wp_register_script('quantity', get_template_directory_uri() . '/js/quantity.js', array('jquery'), '1.0.0', true);
+    wp_register_script('filters', get_template_directory_uri() . '/js/filters.js', array('jquery'), '1.0.0', true);
+    wp_register_script('popup', get_template_directory_uri() . '/js/popup.js', array('jquery'), '1.0.0', true);
 
     //Enqueue Scripts
     wp_enqueue_script('script');
+    wp_enqueue_script('quantity');
+    wp_enqueue_script('filters');
+    wp_enqueue_script('popup');
 
 }
 add_action('wp_enqueue_scripts', 'epicure_scripts');
