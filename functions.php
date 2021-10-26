@@ -1,6 +1,7 @@
 <?php
 
-require get_template_directory() . '/inc/database.php';
+require get_template_directory() . '/inc/reservation-database.php';
+require get_template_directory() . '/inc/users-database.php';
 require get_template_directory() . '/inc/db_reservation.php';
 
 // Add Setup
@@ -10,6 +11,7 @@ function epicure_setup() {
     add_image_size('restaurant_card_mobile',  162, 122, true);
     add_image_size('restaurant',  1102, 396, true);
     add_image_size('dish-card',  236, 150, true);
+    add_image_size('icon-meaning',  39, 30, true);
 
     add_theme_support('title-tag');
 }
@@ -19,6 +21,7 @@ add_action('after_setup_theme', 'epicure_setup');
 function epicure_menus() {
     register_nav_menus(array(
         'header-menu' => __('Header Menu', 'epicure'),
+        'user-menu' => __('User Menu', 'epicure')
     ));
 }
 add_action('init', 'epicure_menus');
@@ -28,24 +31,47 @@ function epicure_scripts() {
     //Register Styles
     wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.0.0');
     wp_register_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '4.7.0');
+    wp_register_style('reservation-form', get_template_directory_uri() . '/css/reservation-form/form.css', array(), '1.0.0');
+    wp_register_style('user-menu', get_template_directory_uri() . '/css/user-menu/user-menu.css', array(), '1.0.0');
 
 
     //Enqueue Styles
+    wp_enqueue_style('sweetalert', get_template_directory_uri() . '/css/sweetalert2.min.css', array(), '11.1.7');
     wp_enqueue_style('style');
+    wp_enqueue_style('reservation-form');
+    wp_enqueue_style('user-menu');
     wp_enqueue_style('fontawesome');
 
 
     //Register Scripts
     wp_register_script('script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
+    wp_register_script('ajax-script', get_template_directory_uri() . '/js/ajax.js', array('jquery'), '1.0.0', true);
     wp_register_script('quantity', get_template_directory_uri() . '/js/quantity.js', array('jquery'), '1.0.0', true);
     wp_register_script('filters', get_template_directory_uri() . '/js/filters.js', array('jquery'), '1.0.0', true);
+//    wp_register_script('reservationDB', get_template_directory_uri() . '/js/reservation-DB.js', array('jquery'), '1.0.', true);
     wp_register_script('popup', get_template_directory_uri() . '/js/popup.js', array('jquery'), '1.0.0', true);
+    wp_register_script('jquery', "https://code.jquery.com/jquery-3.2.1.slim.min.js", array(), '3.2.1', true );
+    wp_register_script('popper', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js", array('jquery'), '1.12.9', true );
+    wp_register_script('bootstrap', "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", array('jquery'), '4.0.0', true );
 
     //Enqueue Scripts
+    wp_enqueue_script('sweetalertjs', get_template_directory_uri() . '/js/sweetalert2.min.js', array('jquery'), '11.1.7', true);
+    wp_enqueue_script('reservationDB', get_template_directory_uri() . '/js/reservation-DB.js', array('jquery'), '1.0', true);
     wp_enqueue_script('script');
+    wp_enqueue_script('ajax-script');
     wp_enqueue_script('quantity');
     wp_enqueue_script('filters');
+//    wp_enqueue_script('reservationDB');
     wp_enqueue_script('popup');
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('popper');
+    wp_enqueue_script('bootstrap');
+
+    wp_localize_script(
+        'reservationDB',
+        'my_ajax_object',
+        array('ajax_url' => admin_url('admin-ajax.php'))
+    );
 
 }
 add_action('wp_enqueue_scripts', 'epicure_scripts');
