@@ -25,29 +25,4 @@
     }
     add_action('after_setup_theme', 'epicure_database');
 
-
-    function epicure_delete_reservation() {
-
-        global $wpdb;
-
-        $table = $wpdb->prefix . 'reservations';
-        $id = $_POST['id'];
-
-        $result = $wpdb->delete($table, array('id'=>$id));
-        if($result == 0) {
-            $response = array(
-                'response' => 'success',
-                'id' => $id
-            );
-        } else {
-            $response = array(
-                'response' => 'error',
-            );
-        }
-//        $url = get_page_by_title("Cart");
-//        wp_redirect(get_permalink($url));
-
-        die(json_encode($response));
-    }
-    add_action('wp_ajax_epicure_delete_reservation', 'epicure_delete_reservation');
 ?>
