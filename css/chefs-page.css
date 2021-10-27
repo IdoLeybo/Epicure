@@ -1,0 +1,20 @@
+/** CHEFS PAGE **/
+.chef-title {
+    margin: 30px auto;
+}
+div.chefs-container {
+    justify-content: space-evenly;
+}
+
+div.chef-content {
+    box-sizing: border-box;
+    padding: 19px 19px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 19px;
+}
+
+div.chef-card img {
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
