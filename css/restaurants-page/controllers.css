@@ -1,0 +1,45 @@
+/** FILTER CONTROLLERS **/
+.controllers {
+    margin: 40px auto;
+
+}
+
+.controllers a span {
+    margin-right: 25px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #000000;
+}
+
+
+@media (max-width: 404px) {
+    .controllers {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px auto;
+    }
+
+    .controllers a {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .controllers a span {
+        font-size: 14px;
+        font-weight: 100;
+        color: #000000;
+        margin-right: 0;
+    }
+
+    .current-filter {
+        font-size: 16px;
+        font-weight: normal;
+
+    }
+}
+
+.current-filter {
+    font-size: 19px!important;
+    font-weight: 600!important;
+
+}

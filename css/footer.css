@@ -1,0 +1,32 @@
+/** FOOTER **/
+footer {
+    width: 100%;
+    height: 94px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -1px 1px -1px rgba(0, 0, 0, 0.3);
+}
+
+footer div.footer-menu {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer div.footer-menu a {
+    color: #000000;
+    margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+    footer div.footer-menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer div.footer-menu a {
+        margin: 37px 45px 36px 0;
+    }
+}
+
