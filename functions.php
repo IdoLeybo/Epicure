@@ -40,6 +40,25 @@ function epicure_scripts() {
     wp_register_style('user-menu', get_template_directory_uri() . '/css/user-menu/user-menu.css', array(), '1.0.0');
     wp_register_style('chefs-page', get_template_directory_uri() . '/css/chefs-page.css', array(), '1.0.0');
     wp_register_style('mobile-menu', get_template_directory_uri() . '/css/mobile-menu.css', array(), '1.0.0');
+    wp_register_style('hero-search', get_template_directory_uri() . '/css/hero-search.css', array(), '1.0.0');
+    wp_register_style('cart', get_template_directory_uri() . '/css/cart/cart.css', array(), '1.0.0');
+    wp_register_style('about-us', get_template_directory_uri() . '/css/front-page/about-us.css', array(), '1.0.0');
+    wp_register_style('chef-section', get_template_directory_uri() . '/css/front-page/chef-section.css', array(), '1.0.0');
+    wp_register_style('icons-section', get_template_directory_uri() . '/css/front-page/icons-section.css', array(), '1.0.0');
+    wp_register_style('signature-section', get_template_directory_uri() . '/css/front-page/signature-section.css', array(), '1.0.0');
+    wp_register_style('popular-section', get_template_directory_uri() . '/css/front-page/popular-section.css', array(), '1.0.0');
+    wp_register_style('hero-section', get_template_directory_uri() . '/css/front-page/hero-section.css', array(), '1.0.0');
+    wp_register_style('filter-controllers', get_template_directory_uri() . '/css/restaurants-page/controllers.css', array(), '1.0.0');
+    wp_register_style('main-container', get_template_directory_uri() . '/css/restaurants-page/main-container.css', array(), '1.0.0');
+    wp_register_style('restaurant-card', get_template_directory_uri() . '/css/restaurants-page/restaurant-card.css', array(), '1.0.0');
+    wp_register_style('single-header', get_template_directory_uri() . '/css/single-restaurant/header.css', array(), '1.0.0');
+    wp_register_style('single-controllers', get_template_directory_uri() . '/css/single-restaurant/controllers.css', array(), '1.0.0');
+    wp_register_style('dish-card', get_template_directory_uri() . '/css/single-restaurant/dish-card.css', array(), '1.0.0');
+    wp_register_style('single-header', get_template_directory_uri() . '/css/single-restaurant/header.css', array(), '1.0.0');
+    wp_register_style('footer', get_template_directory_uri() . '/css/footer.css', array(), '1.0.0');
+    wp_register_style('main-header', get_template_directory_uri() . '/css/header/main-header.css', array(), '1.0.0');
+    wp_register_style('left-header', get_template_directory_uri() . '/css/header/left-header.css', array(), '1.0.0');
+    wp_register_style('right-header', get_template_directory_uri() . '/css/header/right-header.css', array(), '1.0.0');
 
 
     //Enqueue Styles
@@ -50,6 +69,25 @@ function epicure_scripts() {
     wp_enqueue_style('user-menu');
     wp_enqueue_style('chefs-page');
     wp_enqueue_style('mobile-menu');
+    wp_enqueue_style('hero-search');
+    wp_enqueue_style('cart');
+    wp_enqueue_style('about-us');
+    wp_enqueue_style('chef-section');
+    wp_enqueue_style('icons-section');
+    wp_enqueue_style('signature-section');
+    wp_enqueue_style('popular-section');
+    wp_enqueue_style('hero-section');
+    wp_enqueue_style('filter-controllers');
+    wp_enqueue_style('main-container');
+    wp_enqueue_style('restaurant-card');
+    wp_enqueue_style('single-header');
+    wp_enqueue_style('single-controllers');
+    wp_enqueue_style('dish-card');
+    wp_enqueue_style('single-header');
+    wp_enqueue_style('footer');
+    wp_enqueue_style('main-header');
+    wp_enqueue_style('left-header');
+    wp_enqueue_style('right-header');
 
 
     //Register Scripts
@@ -240,3 +278,5 @@ function epicure_chefs() {
     register_post_type( 'chefs', $args );
 }
 add_action( 'init', 'epicure_chefs' );
+
+
