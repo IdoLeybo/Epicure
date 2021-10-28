@@ -9,7 +9,7 @@ div.chefs-container {
 div.chef-content {
     box-sizing: border-box;
     padding: 19px 19px;
-    background-color: rgba(0,0,0,0.1);
+    background-color: #f9f4ea;
     border-radius: 5px;
     margin-bottom: 19px;
 }

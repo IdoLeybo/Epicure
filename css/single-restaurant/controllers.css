@@ -1,0 +1,39 @@
+/** FILTER CONTROLLERS **/
+
+.dish-controllers {
+    margin: 40px auto;
+}
+
+.dish-controllers a span {
+    font-size: 25.5px;
+    letter-spacing: 1.82px;
+    font-weight: 100;
+    font-family: HelveticaNeue-Thin;
+    color: #000000;
+    margin: 0 20px 6px 0;
+}
+
+
+@media (max-width: 404px) {
+    .dish-controllers {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+    }
+
+    .dish-controllers a {
+        margin-top: 20px;
+    }
+
+    .dish-controllers a span {
+        font-size: 17px;
+        font-weight: 100;
+        color: #000000;
+    }
+}
+
+.current-dish-filter {
+    border-bottom: 2px solid rgba(222,146,0,0.9);
+    opacity: 0.9;
+    padding-bottom: 4px;
+}
