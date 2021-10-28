@@ -101,23 +101,20 @@ function epicure_reservations() { ?>
                 <?php
                     $id = $reservation['user_id'];
                     $user = $wpdb->get_results("SELECT * FROM wp_epicure_users WHERE user_id=$id", ARRAY_A);
-                    if(sizeof($user) != 0) {?>
 
+                    if(sizeof($user) != 0) {?>
                 <?php if($reservation['user_id'] != 0 || ($reservation['user_id'] == 0 && $user[0]['phone'] != NULL) || ($reservation['user_id'] == 0 && sizeof($user) > 0)){ ?>
 
                     <tr>
                         <td><?php echo $reservation['id']?></td>
-                        <?php if($reservation['user_name'] == '') {?>
-                             <td>user</td>
-                      <?php  } else { ?>
-                            <td><?php echo $reservation['user_name'] ?></td>
-                       <?php } ?>
                         <?php
                             if(sizeof($user) > 0) { ?>
+                                <td><?php echo $user[0]['name'] ?></td>
                                 <td><?php echo $user[0]['date']?></td>
                                 <td><?php echo $user[0]['email']?></td>
                                 <td><?php echo $user[0]['phone']?></td>
                            <?php } else { ?>
+                                <td><?php echo $reservation['user_name'] ?></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>

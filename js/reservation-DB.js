@@ -3,9 +3,7 @@ jQuery(document).ready(function($) {
     $('.delete-db-item').on('click', function(e) {
         console.log('click')
         ajaxurl = my_ajax_object.ajax_url;
-        console.log(ajaxurl)
         let id = parseInt(e.target.parentElement.className);
-        console.log(id)
 
         let data = {
             action: 'epicure_delete_reservation',
@@ -26,7 +24,6 @@ jQuery(document).ready(function($) {
 
                 jQuery.post(ajaxurl,data,function (result) {
                     let res = JSON.parse(result)
-                    console.log(res)
                     $("."+ res.id).remove();
                         Swal.fire(
                             'Reservation Deleted!',
@@ -34,27 +31,6 @@ jQuery(document).ready(function($) {
                             'success'
                         )
                 })
-
-
-                // $.ajax({
-                //     type:'post',
-                //     data: data,
-                //     url: ajaxurl,
-                //     success: function (data) {
-                //         let result = JSON.parse(data);
-                //         if(result.response == 'success') {
-                //             $("."+ res.id).remove();
-                //             Swal.fire(
-                //                 'Reservation Deleted!',
-                //                 'Success, the reservation was deleted!',
-                //                 'success'
-                //             )
-                //         }
-                //     }
-                //
-                // })
-
-
             }
         })
     })
