@@ -1,4 +1,5 @@
 <?php $id = um_profile_id(); ?>
+
 <div class="modal-dialog modal-dialog-centered form-modal" role="document">
 
         <div class="modal-content">
@@ -12,8 +13,10 @@
                     <div class="modal-header form-header">
                         <img class="dish-img-form" src="<?php echo the_post_thumbnail_url(); ?>" />
                         <div class="dish-name-form container-flex">
-                            <?php if( get_field('icon') ): ?>
-                                <img width="39" height="30" src="<?php the_field('icon'); ?>" />
+                            <?php $type = get_field('icon_type'); ?>
+                            <?php if( $type !== 'none' ): ?>
+                                <?php $lowercase = strtolower($type) ; ?>
+                                <img width="39" height="30" src="<?php echo get_template_directory_uri() . '/img/' . $lowercase . '-icon.png' ?>" alt="icon type image" />
                             <?php endif; ?>
                             <h2 class="modal-title" id="exampleModalLongTitle" ><?php the_title(); ?></h2>
                         </div>
@@ -29,11 +32,11 @@
                         <input type="hidden" name="user-name" value="<?php echo um_get_display_name( $id ) ?>" />
                         <h3>Choose a side</h3>
                         <div class="white-bread">
-                            <input type="radio" value="White Bread" name="side1" id="side">
+                            <input type="radio" value="White Bread" name="side" id="side">
                             <label for="side">White Bread</label>
                         </div>
                         <div class="stick-rice">
-                            <input type="radio" value="Sticky Rice" name="side2" id="side">
+                            <input type="radio" value="Sticky Rice" name="side" id="side">
                             <label for="side">Sticky Rice</label>
                         </div>
                     </div>

@@ -6,9 +6,21 @@
                 <h1 class="text-primary text-center"><?php the_field('hero_title'); ?></h1>
 <!--                --><?php //echo do_shortcode("[search-in-place-form]"); ?>
                 <?php get_template_part('templates/filter', 'herosearch'); ?>
-
             </div>
+
         </section>
+        <div class="hero-menu">
+            <div class="header-menu">
+                <?php
+                $args = array(
+                    'theme_location' => 'header-menu',
+                    'container'      => 'nav',
+                    'container_class' => 'hero-nav text-primary'
+                );
+                wp_nav_menu($args);
+                ?>
+            </div><!--.menu-->
+        </div>
 
         <section class="popular-section">
             <h1 class="text-primary text-center"><?php the_field('popular_title'); ?></h1>

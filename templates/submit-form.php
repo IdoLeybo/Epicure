@@ -13,7 +13,7 @@
                 <form class="submit-form" method="post">
                     <h2>Make a reservation</h2>
                     <div class="field">
-                        <input type="text" name="name" placeholder="Name" required />
+                        <input type="text" name="name" placeholder="Name" value="<?php echo um_get_display_name( $id ) ?>" required />
                     </div>
                     <div class="field">
                         <input type="datetime-local" name="date" placeholder="Date" required/>

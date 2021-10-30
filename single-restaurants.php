@@ -27,8 +27,6 @@
             </a>
         </div>
 
-        <?php get_template_part('templates/reservation', 'form'); ?>
-
         <div id="breakfast-Div" class="container-menu container-flex">
             <?php
             $args = array(
@@ -36,16 +34,15 @@
                 'post_per_page' => 10,
                 'orderby'   => 'title',
                 'order'     => 'ASC',
-                'category_name' => 'breakfast'
+                'category_name' => $slug . '_breakfast'
             );
 
             $dishes = new WP_Query($args);
 
             while ($dishes->have_posts()): $dishes->the_post() ?>
-                <?php get_template_part('templates/dishes', 'loop'); ?>
+                <?php get_template_part('templates/breakfastdish', 'loop'); ?>
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
-
         <div id="lunch-Div" class="container-menu container-flex" style="display: none">
             <?php
             $args = array(
@@ -53,16 +50,15 @@
                 'post_per_page' => 10,
                 'orderby'   => 'title',
                 'order'     => 'ASC',
-                'category_name' => 'lunch'
+                'category_name' => $slug . '_lunch'
             );
 
             $dishes = new WP_Query($args);
 
             while ($dishes->have_posts()): $dishes->the_post() ?>
-                <?php get_template_part('templates/dishes', 'loop'); ?>
+                <?php get_template_part('templates/lunchdish', 'loop'); ?>
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
-
         <div id="dinner-Div" class="container-menu container-flex" style="display: none">
             <?php
             $args = array(
@@ -70,13 +66,13 @@
                 'post_per_page' => 10,
                 'orderby'   => 'title',
                 'order'     => 'ASC',
-                'category_name' => 'dinner'
+                'category_name' => $slug . '_dinner'
             );
 
             $dishes = new WP_Query($args);
 
             while ($dishes->have_posts()): $dishes->the_post() ?>
-                <?php get_template_part('templates/dishes', 'loop'); ?>
+                <?php get_template_part('templates/dinnerdish', 'loop'); ?>
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
 
