@@ -1,0 +1,40 @@
+/** SINGLE CHEF HEADER **/
+div.chef-page-header {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 30px auto;
+}
+
+div.chef-page-header img {
+    border-radius: 10px;
+}
+
+div.chef-page-header h1 {
+    margin: 30px auto ;
+    color: #ffffff;
+    background: linear-gradient(0deg, #4e4e4e, #0000001a);
+    max-width: 339px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+div.chef-page-content {
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.86);
+}
+
+div.chef-page-content p {
+    padding: 20px;
+    height: 350px;
+    text-align: center;
+    margin: 50px auto;
+    line-height: 2.4;
+    width: 60%;
+}
+
+div.chef-page-restaurants {
+    justify-content: space-evenly;
+    width: 60%;
+}

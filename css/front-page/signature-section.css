@@ -1,7 +1,7 @@
 /** SIGNATURE SECTION **/
 section.signature-section {
     margin-top: 100px;
-    text-align: right;
+    text-align: center;
 }
 
 section.signature-section h1 {
@@ -14,16 +14,16 @@ section.signature-section h1 {
     letter-spacing: 1.25px;
     text-align: center;
     color: #000000;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 section.signature-section div.dishes-content {
-    margin: 6.5px;
+    margin: 0 6.5px 6.5px;
     width: 360px;
     height: 654px;
 }
-section.signature-section div.dishes-content h2.name {
-    margin: -50px 0 0;
+section.signature-section div.signature-dish h2.name {
+    margin: 0 auto 8px;
     font-family: HelveticaNeue;
     font-size: 30px;
     font-weight: normal;
@@ -38,7 +38,7 @@ section.signature-section div.dishes-content h2.name {
 section.signature-section div.dish-card {
     width: 100%;
     height: 100%;
-    margin: 12px 0 0;
+    margin: 0 0;
 }
 
 section.signature-section div.thumbnail-image img {
@@ -85,6 +85,18 @@ section.signature-section div.dish-details p.price {
     line-height: normal;
     letter-spacing: 1.66px;
     color: #000000;
+    margin: 0;
+}
+
+section.signature-section div.dish-details p.icon-price {
+    font-family: HelveticaNeue-Thin;
+    font-size: 24.9px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.66px;
+    color: #000000;
 }
 
 @media (max-width: 785px) {
@@ -99,15 +111,17 @@ section.signature-section div.dish-details p.price {
         flex-shrink: 0;
         height: 470.9px;
         width: 259.2px;
-        margin-top: 40px;
     }
     section.signature-section div.thumbnail-image img {
         height: 208.8px;
         object-fit: cover;
     }
+    section.signature-section div.dish-details div {
+        height: 100%;
+    }
     section.signature-section div.dish-details h2 {
         width: 144.7px;
-        height: 102.4px;
+        height: 80px;
         font-family: HelveticaNeue;
         font-size: 27.6px;
         font-weight: normal;
@@ -117,11 +131,11 @@ section.signature-section div.dish-details p.price {
         letter-spacing: 1.84px;
         text-align: center;
         color: #000000;
-        margin-bottom: 0;
+        margin: 10px auto 0;
     }
     section.signature-section div.dish-details p.details {
         width: 215.4px!important;
-        height: 111.5px;
+        height: 100px;
         font-family: HelveticaNeue-Thin;
         font-size: 17.3px;
         font-weight: 100;
@@ -156,7 +170,7 @@ section.signature-section div.dish-details p.price {
 
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
     section.signature-section {
         margin-top: 20px;
     }
@@ -170,6 +184,7 @@ section.signature-section div.dish-details p.price {
     section.signature-section div.slider {
         display: flex;
         overflow-x: auto;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
     }
@@ -179,8 +194,8 @@ section.signature-section div.dish-details p.price {
     }
 }
 
-@media (max-width: 375px) {
-    section.signature-section div.dishes-content h2.name {
-        padding-left: 40px;
-    }
-}
+/*@media (max-width: 375px) {*/
+/*    section.signature-section div.dishes-content h2.name {*/
+/*        padding-left: 40px;*/
+/*    }*/
+/*}*/

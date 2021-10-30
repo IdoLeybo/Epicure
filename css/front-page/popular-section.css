@@ -73,7 +73,7 @@ section.popular-section a {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
     section.popular-section .container-flex {
         flex-wrap: unset;
         justify-content: unset;
@@ -84,6 +84,7 @@ section.popular-section a {
     section.popular-section div.slider {
         display: flex;
         overflow-x: auto;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
     }

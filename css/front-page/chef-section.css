@@ -146,14 +146,6 @@ div.chef-restaurants-container div.restaurant-details h2 {
 }
 
 @media (max-width: 550px) {
-    div.chef-div p.chef-details {
-        margin-top: 10px;
-        width: 325px;
-        font-size: 13.5px;
-    }
-}
-
-@media (max-width: 450px) {
     section.chef-section {
         margin-top: 60px;
     }
@@ -164,12 +156,18 @@ div.chef-restaurants-container div.restaurant-details h2 {
     section.chef-section div.chef-restaurants-container div.slider {
         display: flex;
         overflow-x: auto;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
     }
     section.chef-section div.chef-restaurants-container div.slides > div {
         scroll-snap-align: start;
         scroll-behavior: smooth;
+    }
+    div.chef-div p.chef-details {
+        margin-top: 10px;
+        width: 325px;
+        font-size: 13.5px;
     }
     div.subtitle {
         width: 90%;

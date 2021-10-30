@@ -1,4 +1,8 @@
 /** HEADER **/
+div.restaurant-details {
+    height: 85vh;
+}
+
 div.restaurant-details h1 {
     font-size: 55px;
     font-weight: normal;
@@ -26,6 +30,12 @@ div.restaurant-details p.time {
 }
 
 @media (max-width: 450px) {
+    div.restaurant-details {
+        height: 50vh;
+    }
+    div.restaurant-details img.restaurant-image {
+        height: 254px;
+    }
     div.restaurant-details h1 {
         margin: 17px 24px 1px 25px;
         font-size: 35px;
