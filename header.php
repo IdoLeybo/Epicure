@@ -64,12 +64,14 @@
                                 ?>
                             </div>
                         </div>
+
                         <?php $id = um_profile_id();?>
                         <div class="<?php echo $id ?>">
                             <a href="http://bedrock-local.co.il/cart/" class="delete-user">
                                 <img src="<?php echo get_template_directory_uri() . '/img/bag-icon.png' ?>">
                             </a>
                         </div>
+
                     </div>
                 </div>
             </div>

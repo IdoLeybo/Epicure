@@ -28,7 +28,7 @@ get_header(); ?>
                 </a>
             </div>
 
-
+        <!--.Filter by categories-->
         <div id="all-Div" class="container-menu container-flex">
             <?php
             $args = array(

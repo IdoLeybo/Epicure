@@ -1,0 +1,56 @@
+/** HEADER **/
+div.restaurant-details h1 {
+    font-size: 55px;
+    font-weight: normal;
+    letter-spacing: 3.67px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-family: HelveticaNeue;
+}
+
+div.restaurant-details p.chef-name {
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: HelveticaNeue-Thin;
+    letter-spacing: 2px;
+}
+
+div.restaurant-details p.time {
+    font-family: HelveticaNeue-Thin;
+    font-size: 18px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    margin: 0 0 0 9px;
+    letter-spacing: 1.2px;
+}
+
+@media (max-width: 450px) {
+    div.restaurant-details h1 {
+        margin: 17px 24px 1px 25px;
+        font-size: 35px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 2.33px;
+    }
+
+    div.restaurant-details p.chef-name {
+        font-size: 24px;
+        font-weight: 100;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1.6px;
+    }
+
+    div.restaurant-details p.time {
+        font-size: 12px;
+        font-weight: 100;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.42;
+        letter-spacing: 0.8px;
+    }
+}

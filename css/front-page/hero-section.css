@@ -1,0 +1,100 @@
+/** HERO SECTION **/
+section.hero-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../img/hero-picture.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 80vh;
+}
+
+section.hero-section img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-header {
+    background-color: rgba(255, 255, 255, 0.88);
+    padding: 41px 134px 42px 136px;
+    box-sizing: border-box;
+    width: 60%;
+    height: 250px;
+    text-align: center;
+}
+
+.hero-header h1 {
+    margin: 0 36px 18px 38px;
+    font-family: HelveticaNeue-Thin;
+    font-size: 35px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 40px;
+    letter-spacing: 1.97px;
+    text-align: center;
+    color: #000000;
+}
+
+.hero-header input {
+    margin: 10px 0 0;
+    padding: 9px 73px 8px 20px;
+    object-fit: contain;
+    border-radius: 4px;
+    border: solid 0.6px #000000;
+    background: transparent;
+    height: 35%;
+    width: 90%;
+    font-size: 22px;
+    font-family: HelveticaNeue-Thin;
+}
+
+@media (max-width: 785px) {
+    section.hero-section {
+        height: 269px !important;
+    }
+    .hero-section.hero-header {
+        width: 95%;
+        height: 125px;
+        padding: 18px 33px 22px;
+    }
+    .hero-header h1 {
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+    .hero-header input {
+        width: 80%;
+        margin: 0;
+        padding: 8px 19px 8px 9px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1250px) {
+    section.hero-section {
+        height: 300px;
+    }
+    .hero-header {
+        width: 70%;
+        height: 200px;
+        padding: 18px 50px 22px;
+    }
+    .hero-header h1 {
+        font-size: 25px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        margin: 20px 0 20px;
+    }
+    .hero-header input {
+        width: 80%;
+        margin: 10px 0 0;
+        padding: 8px 19px 8px 9px;
+        font-size: 22px;
+        text-align: center;
+    }
+}
