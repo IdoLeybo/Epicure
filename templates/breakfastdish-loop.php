@@ -7,8 +7,10 @@
             <div class="dish-details">
                 <h2 class="text-primary"><?php the_title(); ?></h2>
                 <p class="text-primary details"> <?php the_field('details'); ?></p>
-                <?php if( get_field('icon') ) { ?>
-                    <img width="39" height="30" src="<?php the_field('icon'); ?>" />
+                <?php $type = get_field('icon_type'); ?>
+                <?php if( $type !== 'none' ) { ?>
+                    <?php $lowercase = strtolower($type) ; ?>
+                    <img width="39" height="30" src="<?php echo get_template_directory_uri() . '/img/' . $lowercase . '-icon.png' ?>" alt="icon type image" />
                     <p class="text-primary icon-price"><span style="font-size: 14px" >₪</span><?php the_field('price'); ?></p>
                 <?php } else { ?>
                     <p class="text-primary price"><span style="font-size: 14px" >₪</span><?php the_field('price'); ?></p>
