@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Epicure</title>
     <?php wp_head(); ?>
 </head>
@@ -38,20 +39,21 @@
 
                 <div class="right-flex">
                     <div class="shape-image-for-mobile">
-                        <button><img src="<?php echo get_template_directory_uri() . '/img/shape.png' ?>" /></button>
+                        <button onclick="openSearchField()" id="drop-search" class="dropbtn">
+                            <img src="<?php echo get_template_directory_uri() . '/img/shape.png' ?>" />
+                        </button>
+                        <div id="mobile-header-search" class="dropdown-content">
+                            <?php get_template_part('templates/filter', 'headersearch'); ?>
+                        </div>
                     </div>
                     <div class="search-field">
-<!--                        --><?php //echo do_shortcode("[search-in-place-form]"); ?>
-<!--                        --><?php //get_search_form(); ?>
                         <?php get_template_part('templates/filter', 'headersearch'); ?>
-<!--                            <input id="mySearch" class="mySearch" type="search" name="search" placeholder="Search for restaurant cuisine, chef">-->
-                            <button type="submit" id="searchsubmit"><img src="<?php echo get_template_directory_uri() . '/img/shape.png' ?>" /></button>
                     </div>
 
                     <div class="user-fields-header">
                         <div class="user-menu">
                             <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="<?php echo get_template_directory_uri() . '/img/user-icon.png' ?>">
+                                <img src="<?php echo get_template_directory_uri() . '/img/user-icon.png' ?>" alt="user icon">
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <?php
@@ -64,14 +66,12 @@
                                 ?>
                             </div>
                         </div>
-
                         <?php $id = um_profile_id();?>
                         <div class="<?php echo $id ?>">
                             <a href="http://bedrock-local.co.il/cart/" class="delete-user">
                                 <img src="<?php echo get_template_directory_uri() . '/img/bag-icon.png' ?>">
                             </a>
                         </div>
-
                     </div>
                 </div>
             </div>
