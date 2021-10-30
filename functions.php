@@ -64,6 +64,8 @@ function epicure_scripts() {
     //Enqueue Styles
     wp_enqueue_style('sweetalert', get_template_directory_uri() . '/css/sweetalert2.min.css', array(), '11.1.7');
     wp_enqueue_style('style');
+    wp_enqueue_style('reservation-form');
+    wp_enqueue_style('user-menu');
     wp_enqueue_style('fontawesome');
     wp_enqueue_style('reservation-form');
     wp_enqueue_style('user-menu');
@@ -95,6 +97,7 @@ function epicure_scripts() {
     wp_register_script('ajax-script', get_template_directory_uri() . '/js/ajax.js', array('jquery'), '1.0', true);
     wp_register_script('quantity', get_template_directory_uri() . '/js/quantity.js', array('jquery'), '1.0.0', true);
     wp_register_script('filters', get_template_directory_uri() . '/js/filters.js', array('jquery'), '1.0.0', true);
+//    wp_register_script('reservationDB', get_template_directory_uri() . '/js/reservation-DB.js', array('jquery'), '1.0.', true);
     wp_register_script('popup', get_template_directory_uri() . '/js/popup.js', array('jquery'), '1.0.0', true);
     wp_register_script('jquery', "https://code.jquery.com/jquery-3.2.1.slim.min.js", array(), '3.2.1', true );
     wp_register_script('popper', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js", array('jquery'), '1.12.9', true );
@@ -108,6 +111,7 @@ function epicure_scripts() {
     wp_enqueue_script('ajax-script');
     wp_enqueue_script('quantity');
     wp_enqueue_script('filters');
+//    wp_enqueue_script('reservationDB');
     wp_enqueue_script('popup');
     wp_enqueue_script('jquery');
     wp_enqueue_script('popper');
@@ -118,6 +122,7 @@ function epicure_scripts() {
         'my_ajax_object',
         array('ajax_url' => admin_url('admin-ajax.php'))
     );
+
     wp_localize_script(
         'userDB',
         'my_ajax',
@@ -129,6 +134,7 @@ function epicure_scripts() {
         'ajax_url',
         array('ajaxurl' => admin_url('admin-ajax.php'))
     );
+
 
 }
 add_action('wp_enqueue_scripts', 'epicure_scripts');

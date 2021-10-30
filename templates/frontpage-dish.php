@@ -1,10 +1,9 @@
 <div class="dishes-content ">
 <h2 class="name"> <?php the_field('restaurant_name'); ?></h2>
-    <a href="#" class="exist">
-        <div id="<?php echo get_post_field('post_name', get_post()) ?>" class=" dish-card text-center">
-            <div class="<?php echo get_post_field('post_name', get_post()) ?>" style="display:none;">
-                <?php get_template_part('templates/reservation', 'form'); ?>
-            </div>
+    <button type="button" data-toggle="modal" data-target="#exampleModalCenter-<?php echo get_post_field('post_name', get_post())?>">
+
+         <div id="<?php echo get_post_field('post_name', get_post()) ?>" class=" dish-card text-center">
+
             <div class="thumbnail-image">
                 <?php the_post_thumbnail('dish-card'); ?>
             </div>
@@ -19,5 +18,8 @@
                 <?php } ?>
             </div>
         </div>
-    </a>
+    </button>
+</div>
+<div class="modal fade" id="exampleModalCenter-<?php echo get_post_field('post_name', get_post()) ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <?php get_template_part('templates/reservation', 'form'); ?>
 </div>

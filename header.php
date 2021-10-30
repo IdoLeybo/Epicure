@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Epicure</title>
     <?php wp_head(); ?>
 </head>
@@ -43,12 +44,23 @@
                             <button><img src="<?php echo get_template_directory_uri() . '/img/shape.png' ?>" /></button>
                     </div>
 
-
                     <div class="user-fields-header">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri() . '/img/user-icon.png' ?>">
-                        </a>
-                        <a href="#">
+                        <div class="user-menu">
+                            <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="<?php echo get_template_directory_uri() . '/img/user-icon.png' ?>">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <?php
+                                $args = array(
+                                    'theme_location' => 'user-menu',
+                                    'container'      => 'nav',
+                                    'container_class' => 'user-nav'
+                                );
+                                wp_nav_menu($args);
+                                ?>
+                            </div>
+                        </div>
+                        <a href="http://bedrock-local.co.il/cart/">
                             <img src="<?php echo get_template_directory_uri() . '/img/bag-icon.png' ?>">
                         </a>
                     </div>
