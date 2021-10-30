@@ -2,10 +2,11 @@
 
     <?php while (have_posts()): the_post(); ?>
         <section class="hero-section">
-<!--            --><?php //the_post_thumbnail() ?>
             <div class="hero-header">
                 <h1 class="text-primary text-center"><?php the_field('hero_title'); ?></h1>
-                <input class="mySearch" type="search" name="hero-search" placeholder="Search for restaurant cuisine, chef">
+<!--                --><?php //echo do_shortcode("[search-in-place-form]"); ?>
+                <?php get_template_part('templates/filter', 'herosearch'); ?>
+
             </div>
         </section>
 

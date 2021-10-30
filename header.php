@@ -6,13 +6,14 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
     <header class="site-header">
         <nav class="header-nav">
             <div class="container">
                 <div class="left-flex">
                     <div class="main-menu">
                         <div class="mobile-menu">
-                            <a href="#" class="mobile"><i class="fa fa-bars"></i></a>
+                            <button data-toggle="modal" data-target="#mobileMenuModal" class="mobile"><i class="fa fa-bars"></i></button>
                         </div>
                     </div>
                     <div class="logo">
@@ -40,8 +41,11 @@
                         <button><img src="<?php echo get_template_directory_uri() . '/img/shape.png' ?>" /></button>
                     </div>
                     <div class="search-field">
-                            <input id="mySearch" class="mySearch" type="text" name="search" placeholder="Search for restaurant cuisine, chef">
-                            <button><img src="<?php echo get_template_directory_uri() . '/img/shape.png' ?>" /></button>
+<!--                        --><?php //echo do_shortcode("[search-in-place-form]"); ?>
+<!--                        --><?php //get_search_form(); ?>
+                        <?php get_template_part('templates/filter', 'headersearch'); ?>
+<!--                            <input id="mySearch" class="mySearch" type="search" name="search" placeholder="Search for restaurant cuisine, chef">-->
+                            <button type="submit" id="searchsubmit"><img src="<?php echo get_template_directory_uri() . '/img/shape.png' ?>" /></button>
                     </div>
 
                     <div class="user-fields-header">
@@ -60,24 +64,24 @@
                                 ?>
                             </div>
                         </div>
-                        <a href="http://bedrock-local.co.il/cart/">
-                            <img src="<?php echo get_template_directory_uri() . '/img/bag-icon.png' ?>">
-                        </a>
+
+                        <?php $id = um_profile_id();?>
+                        <div class="<?php echo $id ?>">
+                            <a href="http://bedrock-local.co.il/cart/" class="delete-user">
+                                <img src="<?php echo get_template_directory_uri() . '/img/bag-icon.png' ?>">
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </nav>
+
     </header>
 
-    <div class="navigation-menu" style="display: none">
-        <?php
-        $args = array(
-            'theme_location' => 'header-menu',
-            'container'      => 'nav',
-            'container_class' => 'site-nav'
-        );
-        wp_nav_menu($args);
-        ?>
+    <div class="modal fade" id="mobileMenuModal" tabindex="-1" role="dialog" aria-labelledby="mobileMenuModalLabel" aria-hidden="true">
+        <?php get_template_part('templates/mobile', 'menu'); ?>
     </div>
+
 
 
