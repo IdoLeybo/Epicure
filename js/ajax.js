@@ -10,13 +10,13 @@ jQuery(document).ready(function($) {
             })
             .then((response) => {
                 if (response.isConfirmed) {
-                    $.ajax({
-                        type:'post',
-                        data: {
-                            'action': 'epicure_save_users',
-                            'type': 'post',
-                        },
-                        url: ajax_url.ajaxurl
+                    let data = {
+                        action: 'epicure_save_users',
+                        type: 'post',
+                    };
+                    let url = ajax_url.ajaxurl;
+                    jQuery.post(url, data, function (response){
+                        console.log(response)
                     })
                 }
 

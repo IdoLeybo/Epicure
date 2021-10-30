@@ -6,9 +6,9 @@
         if(isset($_POST['reservation']) && $_POST['hidden'] == '1') {
 
             if (in_array("White Bread", $_POST)) {
-                $side = $_POST['side1'];
+                $side = $_POST['side'];
             } else if (in_array( "Sticky Rice" , $_POST) ) {
-                $side = $_POST['side2'];
+                $side = $_POST['side'];
             }else {
                 $side = 'none';
             }
@@ -87,30 +87,51 @@
             global $wpdb;
 
             $table = $wpdb->prefix . 'reservations';
-            $id = $_POST['id'];
 
             $users = $wpdb->get_results(
                 "SELECT * FROM wp_epicure_users
                     WHERE user_id=0
                     ", ARRAY_A);
-            for($i = 0; $i < sizeof($users); $i++ ) {
+            $username_from_reservation = $wpdb->get_results(
+                "SELECT user_name FROM wp_reservations
+                    WHERE user_id=0
+                    ", ARRAY_A);
 
-                if($users[$i]['phone'] == ''){
+            if(sizeof($users) > 0) {
+                for($i = 0; $i < sizeof($users); $i++ ) {
 
-                    $result = $wpdb->delete($table, array('user_id'=>0));
-                    if($result == 1) {
-                        $response = array(
-                            "response" => 'success',
-                            "id" => $id
-                        );
-                    } else {
-                        $response = array(
-                            'response' => 'error',
-                        );
+                    if($users[$i]['phone'] == ''){
+
+                        $result = $wpdb->delete($table, array('user_id'=>0));
+                        if($result == 1) {
+                            $response = array(
+                                "response" => 'success',
+                                'message' => 'reservations deleted'
+                            );
+                        } else {
+                            $response = array(
+                                'response' => 'error',
+                            );
+                        }
+
+                        die(json_encode($response));
                     }
-
-                    die(json_encode($response));
                 }
+            } else {
+                $result = $wpdb->delete($table, array('user_id'=>0));
+                var_dump($result);
+                if($result == 1) {
+                    $response = array(
+                        "response" => 'success',
+                        'message' => 'reservations deleted'
+                    );
+                } else {
+                    $response = array(
+                        'response' => 'error',
+                    );
+                }
+
+                die(json_encode($response));
             }
         }
     add_action('wp_ajax_epicure_delete_user_reservations', 'epicure_delete_user_reservations');

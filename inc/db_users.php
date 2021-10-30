@@ -5,7 +5,6 @@ function epicure_save_users() {
 
     if(isset($_POST['submit-reservation']) && $_POST['hidden'] == '1') {
 
-
         $name = $_POST['name'];
         $email = $_POST['email'];
         $date = $_POST['date'];
@@ -46,17 +45,16 @@ function epicure_delete_user() {
     global $wpdb;
 
     $table = $wpdb->prefix . 'epicure_users';
-    $id = $_POST['id'];
 
     $result = $wpdb->delete($table, array('user_id'=>0));
     if($result == 1) {
         $response = array(
             "response" => 'success',
-            "id" => $id
         );
     } else {
         $response = array(
             'response' => 'error',
+            'message' => 'No users with this ID'
         );
     }
 
