@@ -102,6 +102,35 @@
                 </div>
             </div>
         </section>
+
+        <section class="about-us-section">
+            <div class="about-us-container container-flex">
+                <div class="about-content">
+                    <h1 class="text-primary text-center"><?php the_field('about_us_titile'); ?></h1>
+                    <p class="about-us-content"><?php the_field('about_us_content'); ?></p>
+                </div>
+                <div class="about-icon">
+                    <img src="<?php echo get_template_directory_uri() . '/img/about-logo.png' ?>" alt="about-logo">
+                </div>
+                <div class="links container-flex">
+                    <div class="app-store-link">
+                        <img src="<?php echo get_template_directory_uri() . '/img/apple.svg' ?>" alt="apple-logo">
+                        <p>
+                            Download on the
+                            <a href="#">App Store</a>
+                        </p>
+                    </div>
+                    <div class="google-play-link ">
+                        <img src="<?php echo get_template_directory_uri() . '/img/google-play.svg' ?>" alt="google-logo">
+                        <p>
+                            Get it on
+                            <a href="#">Google Play</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <?php endwhile; ?>
 
 <?php get_footer(); ?>
