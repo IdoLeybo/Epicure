@@ -6,7 +6,7 @@ get_header(); ?>
 
     <?php while (have_posts()): the_post(); ?>
         <h1 class="chef-title text-center text-primary"><?php the_field('header_title'); ?></h1>
-        <div class="chefs-container container-flex">
+        <div class="chefs-container container-flex slider slides">
             <?php
             $args = array(
                 'post_type' => 'chefs',
@@ -22,6 +22,7 @@ get_header(); ?>
             <?php endwhile; wp_reset_postdata(); ?>
 
         </div>
+
     <?php endwhile; ?>
 
 <?php get_footer(); ?>

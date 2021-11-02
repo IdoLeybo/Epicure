@@ -19,3 +19,26 @@ div.chef-card img {
     border-radius: 5px;
     padding-bottom: 10px;
 }
+
+@media (max-width: 550px) {
+    div.chef-content {
+        margin-right: 10px;
+        padding: 10px;
+    }
+    div.chefs-container {
+        flex-wrap: unset;
+        justify-content: unset;
+    }
+
+    div.chefs-container {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    div.chefs-container > div {
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
+    }
+}

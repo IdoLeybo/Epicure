@@ -38,3 +38,18 @@ div.chef-page-restaurants {
     justify-content: space-evenly;
     width: 60%;
 }
+
+@media (max-width: 550px) {
+    div.chef-page-content {
+        margin-bottom: 20px;
+    }
+    div.chef-page-content p {
+        padding: 20px;
+        height: 350px;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 1.4;
+        width: 80%;
+        font-size: 13px;
+    }
+}
