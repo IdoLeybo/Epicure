@@ -30,6 +30,7 @@
             $quantity = $_POST['quantity'];
 
             $table = $wpdb->prefix . 'reservations';
+            $table2 = $wpdb->prefix . 'reservations_admin';
 
             $data = array(
                 'dish' => $dish,
@@ -51,6 +52,7 @@
             );
 
             $wpdb->insert($table, $data, $format);
+            $wpdb->insert($table2, $data, $format);
 
             $url = get_page_by_title("Home");
             wp_redirect(get_permalink($url));
@@ -64,10 +66,12 @@
         global $wpdb;
 
         $table = $wpdb->prefix . 'reservations';
+        $table2 = $wpdb->prefix . 'reservations_admin';
         $id = $_POST['id'];
 
         $result = $wpdb->delete($table, array('id'=>$id));
-        if($result == 1) {
+        $result2 = $wpdb->delete($table2, array('id'=>$id));
+        if($result == 1 && $result2 == 1) {
             $response = array(
                 "response" => 'success',
                 "id" => $id
@@ -92,6 +96,7 @@
                 "SELECT * FROM wp_epicure_users
                     WHERE user_id=0
                     ", ARRAY_A);
+
             $username_from_reservation = $wpdb->get_results(
                 "SELECT user_name FROM wp_reservations
                     WHERE user_id=0

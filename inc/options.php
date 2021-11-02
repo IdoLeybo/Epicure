@@ -96,13 +96,12 @@ function epicure_reservations() { ?>
             <?php
                 global $wpdb;
 //
-                $reservations = $wpdb->get_results('SELECT * FROM wp_reservations', ARRAY_A);
+                $reservations = $wpdb->get_results('SELECT * FROM wp_reservations_admin', ARRAY_A);
                 foreach ($reservations as $reservation):?>
                 <?php
                     $id = $reservation['user_id'];
-                    $user = $wpdb->get_results("SELECT * FROM wp_epicure_users WHERE user_id=$id", ARRAY_A);
-
-                    if(sizeof($user) != 0) {?>
+                    $user = $wpdb->get_results("SELECT * FROM wp_epicure_users WHERE user_id='$id'", ARRAY_A);
+                    if(sizeof($user) != 0 && $reservation['submitted'] === '1') {?>
                 <?php if($reservation['user_id'] != 0 || ($reservation['user_id'] == 0 && $user[0]['phone'] != NULL) || ($reservation['user_id'] == 0 && sizeof($user) > 0)){ ?>
 
                     <tr>
@@ -110,7 +109,7 @@ function epicure_reservations() { ?>
                         <?php
                             if(sizeof($user) > 0) { ?>
                                 <td><?php echo $user[0]['name'] ?></td>
-                                <td><?php echo $user[0]['date']?></td>
+                                <td><?php echo $reservation['date']?></td>
                                 <td><?php echo $user[0]['email']?></td>
                                 <td><?php echo $user[0]['phone']?></td>
                            <?php } else { ?>
