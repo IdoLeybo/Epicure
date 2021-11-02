@@ -1,10 +1,9 @@
 jQuery(document).ready(function($) {
 
     $('.delete-db-item').on('click', function(e) {
-        console.log('click')
-        ajaxurl = my_ajax_object.ajax_url;
-        let id = parseInt(e.target.parentElement.className);
 
+        ajaxurl = my_ajax_object.ajax_url;
+        let id = parseInt(e.target.parentElement.parentElement.className);
         let data = {
             action: 'epicure_delete_reservation',
             id: id,

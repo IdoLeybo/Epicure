@@ -18,8 +18,14 @@ jQuery(document).ready(function($) {
     $(document).click(function(){
         $("#myDropdown").hide();
     });
-
     $("#myDropdown").click(function(e){
+        e.stopPropagation();
+    });
+
+    $(document).click(function(){
+        $("#myHeaderDropdown").hide();
+    });
+    $("#myHeaderDropdown").click(function(e){
         e.stopPropagation();
     });
 })
@@ -34,6 +40,7 @@ function filterFunction() {
     filter = input.value.toUpperCase();
     div = document.getElementById("myDropdown");
     a = div.getElementsByTagName("a");
+    console.log(input.value)
     for (i = 0; i < a.length; i++) {
         txtValue = a[i].textContent || a[i].innerText;
         if(filter === '') div.style.display = 'none';
@@ -53,6 +60,7 @@ function filterHeaderFunction() {
     div = document.getElementById("myHeaderDropdown");
     a = div.getElementsByTagName("a");
 
+    console.log(input.value)
     for (i = 0; i < a.length; i++) {
         txtValue = a[i].textContent || a[i].innerText;
 
@@ -61,7 +69,31 @@ function filterHeaderFunction() {
         }
         if (txtValue.toUpperCase().indexOf(filter) > -1 && filter !== '') {
 
-            div.style.display = "block"
+            div.style.display = "block";
+            a[i].style.display = "block";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+
+function filterHeader2Function() {
+    let input, filter, a, i;
+    input = document.getElementById("myHeaderInput2");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myHeaderDropdown2");
+    a = div.getElementsByTagName("a");
+
+    console.log(input.value)
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+
+        if(filter === '') {
+            div.style.display = 'none';
+        }
+        if (txtValue.toUpperCase().indexOf(filter) > -1 && filter !== '') {
+
+            div.style.display = "block";
             a[i].style.display = "block";
         } else {
             a[i].style.display = "none";
