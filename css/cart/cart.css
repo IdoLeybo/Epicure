@@ -17,7 +17,7 @@ div.cart-container .table thead tr {
 }
 
 div.cart-container .table thead tr th {
-    width: 16.666667%;
+    width: 14.2857%;
 }
 
 div.cart-container .table tbody {
@@ -35,7 +35,7 @@ div.cart-container .table tbody tr {
 
 div.cart-container .table tbody tr th,
 div.cart-container .table tbody tr td {
-    width: 16.666667%;
+    width: 14.2857%;
 }
 
 td.delete-db-item span {
@@ -51,29 +51,60 @@ h1.cart-title {
     margin: 20px auto;
 }
 
+div.cart-container .table tbody tr td.submitted {
+    background-color: palegreen;
+    font-family: HelveticaNeue;
+    letter-spacing: 1px;
+}
+
+div.cart-container .table tbody tr td.pending {
+    background-color: orange;
+    font-family: HelveticaNeue;
+    letter-spacing: 1px;
+}
+
 button.cart-submit {
     width: 20%;
-    background-color: #02b4f6;
+    background-color: #d7efe2;;
     padding: 10px;
     font-size: 20px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
+    div.cart-container .table thead tr th {
+        font-size: 14px;
+    }
+    div.cart-container .table tbody tr td.submitted {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    div.cart-container .table thead tr th {
+        padding-left: 5px;
+        font-size: 10px;
+    }
+    div.cart-container .table tbody tr td.submitted {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+        padding-top: 12px;
+    }
     div.cart-container .table tbody tr th,
     div.cart-container .table tbody tr td {
-        padding: 3px 0 0;
-        font-size: 14px;
+        padding: 10px 0 0;
+        font-size: 10px;
     }
     td.delete-db-item {
        text-align: left;
-        margin: 10px auto;
+        margin: 0 auto;
     }
     td.delete-db-item span {
-        font-size: 12px;
+        font-size: 10px;
+        padding: 2px 4px;
+        margin-left: 7px;
     }
     button.cart-submit {
         width: 20%;
-        background-color: #d7efe2;
         padding: 10px;
         font-size: 14px;
     }

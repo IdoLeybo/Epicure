@@ -1,6 +1,9 @@
 /** HEADER **/
-div.restaurant-details {
-    height: 85vh;
+div.restaurant-details img.restaurant-image {
+    max-width: 1102px;
+    width: 100%;
+    height: 396px;
+    object-fit: cover
 }
 
 div.restaurant-details h1 {
@@ -30,9 +33,6 @@ div.restaurant-details p.time {
 }
 
 @media (max-width: 450px) {
-    div.restaurant-details {
-        height: 50vh;
-    }
     div.restaurant-details img.restaurant-image {
         height: 254px;
     }

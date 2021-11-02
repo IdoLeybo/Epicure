@@ -16,13 +16,13 @@
         <?php $filter3 = get_post_field('filter_3', get_post()) ?>
 
         <div class="dish-controllers text-center">
-            <a href="http://bedrock-local.co.il/restaurants/<?php $slug ?>/#<?php echo $filter1 ?>" class="dishHref">
+            <a href="<?php echo get_permalink(get_page_by_title('Restaurants')) ?><?php $slug ?>/#<?php echo $filter1 ?>" class="dishHref">
                 <span id="breakfast" class="text-primary text-center current-dish-filter"><?php echo the_field('filter_1'); ?></span>
             </a>
-            <a href="http://bedrock-local.co.il/restaurants/<?php $slug ?>/#<?php echo $filter2 ?>" class="dishHref">
+            <a href="<?php echo get_permalink(get_page_by_title('Restaurants')) ?><?php $slug ?>/#<?php echo $filter2 ?>" class="dishHref">
                 <span id="lunch" class="text-primary text-center"><?php echo the_field('filter_2'); ?></span>
             </a>
-            <a href=http://bedrock-local.co.il/restaurants/<?php $slug ?>/#<?php echo $filter3 ?>" class="dishHref">
+            <a href=<?php echo get_permalink(get_page_by_title('Restaurants')) ?><?php $slug ?>/#<?php echo $filter3 ?>" class="dishHref">
                 <span id="dinner" class="text-primary text-center"><?php echo the_field('filter_3'); ?></span>
             </a>
         </div>

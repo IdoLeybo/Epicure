@@ -22,17 +22,24 @@
                     <th scope="col">Options</th>
                     <th scope="col">Changes</th>
                     <th scope="col">Quantity</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                    for($i = 0; $i < sizeof($reservations); $i++ ) {?>
+                    for($i = 0; $i < sizeof($reservations); $i++ ) {
+                        if($reservations[$i]->submitted === '1'){
+                            $status = 'submitted';
+                        } else {
+                            $status = 'pending';
+                        } ?>
                         <tr class="<?php echo $reservations[$i]->id ?>">
                             <th scope="row"><?php echo $i + 1 ?></th>
                             <td><?php echo $reservations[$i]->dish ?></td>
                             <td><?php echo $reservations[$i]->side ?></td>
                             <td><?php echo $reservations[$i]->changes ?></td>
                             <td><?php echo $reservations[$i]->quantity ?></td>
+                            <td class="<?php echo $status ?>"><?php echo $status?></td>
                             <td class="delete-db-item"><span>delete</span></td>
                         </tr>
                   <?php } ?>

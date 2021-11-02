@@ -4,7 +4,6 @@
         <section class="hero-section">
             <div class="hero-header">
                 <h1 class="text-primary text-center"><?php the_field('hero_title'); ?></h1>
-<!--                --><?php //echo do_shortcode("[search-in-place-form]"); ?>
                 <?php get_template_part('templates/filter', 'herosearch'); ?>
             </div>
 
@@ -41,7 +40,7 @@
                 <?php endwhile; wp_reset_postdata(); ?>
             </div
             <div>
-                <a href="http://bedrock-local.co.il/allrestaurants/">
+                <a href="<?php echo get_permalink(get_page_by_title('Restaurants')); ?>">
                     <span class="text-primary">All Restaurants >></span>
                 </a>
             </div>
@@ -69,7 +68,7 @@
 
         <section class="icon-section">
             <h1 class="text-primary text-center"><?php the_field('icons_title'); ?></h1>
-            <div class="icons-container container-flex">
+            <div class="icons-container">
                 <div class="icon-item">
                     <img width="79" height="59" src="<?php the_field('iconimg_1'); ?>" />
                     <p><?php the_field('icon_name_1'); ?></p>
