@@ -8,7 +8,7 @@
             </button>
 
         </div>
-        <div class="mobile-menu-body">
+        <div class="mobile-menu-body submit-body">
             <div class="submit-info">
                 <form class="submit-form" method="post">
                     <h2>Make a reservation</h2>

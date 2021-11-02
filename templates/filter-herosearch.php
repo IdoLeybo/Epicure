@@ -1,5 +1,11 @@
-<input type="text" class="mySearch" name="hero-search" placeholder="Search for restaurant cuisine, chef" id="myInput" onkeyup="filterFunction()">
+<input type="text"
+       class="mySearch"
+       name="hero-search"
+       placeholder="Search for restaurant cuisine, chef"
+       id="myInput"
+       onkeyup="filterFunction()">
 <div id="myDropdown" class="dropdown-hero-content">
+
     <?php
     $args = array(
         'post_type' => 'restaurants',

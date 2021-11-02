@@ -41,6 +41,7 @@ function epicure_scripts() {
     wp_register_style('chefs-page', get_template_directory_uri() . '/css/chefs-page.css', array(), '1.0.0');
     wp_register_style('mobile-menu', get_template_directory_uri() . '/css/mobile-menu.css', array(), '1.0.0');
     wp_register_style('cart', get_template_directory_uri() . '/css/cart/cart.css', array(), '1.0.0');
+    wp_register_style('submit-form', get_template_directory_uri() . '/css/cart/submit-form.css', array(), '1.0.0');
     wp_register_style('about-us', get_template_directory_uri() . '/css/front-page/about-us.css', array(), '1.0.0');
     wp_register_style('chef-section', get_template_directory_uri() . '/css/front-page/chef-section.css', array(), '1.0.0');
     wp_register_style('icons-section', get_template_directory_uri() . '/css/front-page/icons-section.css', array(), '1.0.0');
@@ -70,6 +71,7 @@ function epicure_scripts() {
     wp_enqueue_style('chefs-page');
     wp_enqueue_style('mobile-menu');
     wp_enqueue_style('cart');
+    wp_enqueue_style('submit-form');
     wp_enqueue_style('about-us');
     wp_enqueue_style('chef-section');
     wp_enqueue_style('icons-section');

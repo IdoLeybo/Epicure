@@ -232,3 +232,10 @@ div.form-footer button {
     }
 
 }
+
+@media (max-width: 500px) {
+    div.form-modal {
+        width: unset;
+    }
+
+}

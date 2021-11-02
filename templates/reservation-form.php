@@ -64,7 +64,7 @@
                 <div class="modal-footer form-footer">
         <!--            <button type="button" class="btn btn-secondary" data-dismiss="modal">X</button>-->
                     <input type="hidden" name="hidden" value="1" />
-                    <button type="submit" class=" btn add-to-bag" name="reservation">ADD TO BAG</button>
+                    <button type="submit" class="btn add-to-bag" name="reservation">ADD TO BAG</button>
                 </div>
             </form>
         </div>
