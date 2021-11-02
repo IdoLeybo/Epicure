@@ -14,6 +14,28 @@ div.user-fields-header {
     margin-left: 28px;
 }
 
+#bag-div,
+#bag-div-notification {
+    position: relative;
+}
+
+div.user-fields-header div.notification {
+    width: 16px;
+    height: 16px;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 11px;
+    border-radius: 50%;
+    font-weight: 600;
+    position: absolute;
+    left: -7px;
+    top: -7px;
+    padding: 0 0 13px;
+    font-family: HelveticaNeue;
+}
+
 div.user-menu div.dropdown-menu {
     padding-bottom: 0;
 }
@@ -73,8 +95,22 @@ div.search-field {
     outline: 3px solid #ddd;
 }
 
-#myHeaderDropdown .dropdown-content {
-    display: none;
+#myHeaderInput2 {
+    box-sizing: border-box;
+    width: 100%;
+    background-image: url(../../img/header-search.svg);
+    background-position: 95%;
+    background-repeat: no-repeat;
+    padding: 14px 20px 12px 5px;
+    height: 32px;
+    border: none;
+    font-family: HelveticaNeue-Thin;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+#myHeaderInput2:focus {
+    outline: 3px solid #ddd;
 }
 
 .dropdown-content {
@@ -132,7 +168,7 @@ button.dropbtn {
 }
 
 @media (max-width: 1100px) {
-    #myHeaderInput {
+    #myHeaderInput2 {
         font-size: 14px;
     }
 }
@@ -141,7 +177,7 @@ button.dropbtn {
     div.search-field {
         max-width: 250px;
     }
-    #myHeaderInput {
+    #myHeaderInput2 {
         font-size: 12px;
         padding-right: 30px;
         background-position: 99%;
@@ -166,6 +202,10 @@ button.dropbtn {
     div.user-fields-header a:nth-child(1) {
         margin-left: 18px;
         margin-right: -5px;
+    }
+
+    #bag-div-notification {
+        margin-left: 18px;
     }
 
 }

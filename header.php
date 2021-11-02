@@ -38,6 +38,7 @@
                 </div>
 
                 <div class="right-flex">
+
                     <div class="shape-image-for-mobile">
                         <button onclick="openSearchField()" id="drop-search" class="dropbtn">
                             <img src="<?php echo get_template_directory_uri() . '/img/shape.png' ?>" />
@@ -46,8 +47,9 @@
                             <?php get_template_part('templates/filter', 'headersearch'); ?>
                         </div>
                     </div>
+
                     <div class="search-field">
-                        <?php get_template_part('templates/filter', 'headersearch'); ?>
+                        <?php get_template_part('templates/filter', 'headersearch2'); ?>
                     </div>
 
                     <div class="user-fields-header">
@@ -67,8 +69,23 @@
                             </div>
                         </div>
                         <?php $id = um_profile_id();?>
-                        <div class="<?php echo $id ?>">
-                            <a href="http://bedrock-local.co.il/cart/" class="delete-user">
+                            <?php
+                                global $wpdb;
+
+                                $table = $wpdb->prefix . 'reservations';
+
+                                $reservations = $wpdb->get_results(
+                                        "SELECT * FROM wp_reservations 
+                                                     WHERE user_id='$id'", ARRAY_A);
+                                $count = sizeof($reservations);
+                                if($count > 0) {?>
+                            <div class="<?php echo $id ?>" id="bag-div-notification">
+                                    <div class="notification"><?php echo strval($count); ?></div>
+                                <?php } else {?>
+                            <div class="<?php echo $id ?>" id="bag-div">
+                                <?php } ?>
+                            <a href="<?php echo get_permalink(get_page_by_title('Cart')); ?>" class="delete-user">
+
                                 <img src="<?php echo get_template_directory_uri() . '/img/bag-icon.png' ?>">
                             </a>
                         </div>

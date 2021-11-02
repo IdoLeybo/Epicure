@@ -2,10 +2,10 @@
        class="mySearch"
        name="hero-search"
        placeholder="Search for restaurant cuisine, chef"
-       id="myHeaderInput"
-       onkeyup="filterHeaderFunction()">
+       id="myHeaderInput2"
+       onkeyup="filterHeader2Function()">
 
-<div id="myHeaderDropdown" class="dropdown-content">
+<div id="myHeaderDropdown2" class="dropdown-content">
 
     <?php
     $args = array(
@@ -18,7 +18,7 @@
 
     $restaurants = new WP_Query($args);
     ?>
-        <div id="res-span" >Restaurants:</div>
+    <div id="res-span" >Restaurants:</div>
     <?php while ($restaurants->have_posts()): $restaurants->the_post() ?>
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
     <?php endwhile; wp_reset_postdata();?>
@@ -32,7 +32,7 @@
     );
 
     $chefs = new WP_Query($args); ?>
-        <div id="chef-span" >Chefs:</div>
+    <div id="chef-span" >Chefs:</div>
     <?php while ($chefs->have_posts()): $chefs->the_post() ?>
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
     <?php endwhile; wp_reset_postdata(); ?>
