@@ -9,9 +9,18 @@
                 <?php if( $type !== 'none' ) { ?>
                     <?php $lowercase = strtolower($type) ; ?>
                     <img width="39" height="30" src="<?php echo get_template_directory_uri() . '/img/' . $lowercase . '-icon.png' ?>" alt="icon type image" />
-                    <p class="text-primary icon-price"><span style="font-size: 14px" >₪</span><?php the_field('price'); ?></p>
+                    <div class="line-price">
+                        <div class="line"></div>
+                        <p class="text-primary icon-price"><span style="font-size: 14px" >₪</span><?php the_field('price'); ?></p>
+                        <div class="line"></div>
+                    </div>
                 <?php } else { ?>
-                    <p class="text-primary price"><span style="font-size: 14px" >₪</span><?php the_field('price'); ?></p>
+                    <div class="padDiv" ></div>
+                    <div class="line-price">
+                        <div class="line"></div>
+                        <p class="text-primary price"><span style="font-size: 14px" >₪</span><?php the_field('price'); ?></p>
+                        <div class="line"></div>
+                    </div>
                 <?php } ?>
             </div>
         </div>

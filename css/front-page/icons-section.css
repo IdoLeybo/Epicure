@@ -11,9 +11,11 @@ section.icon-section {
 }
 
 .icons-container {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    width: 50%;
-    justify-content: space-evenly!important;
+    width: 45%;
+    justify-content: center;
 }
 
 section.icon-section h1 {
@@ -42,6 +44,7 @@ section.icon-section div.icon-item p {
 
 div.icon-item {
     text-align: center;
+    width: 33%;
 }
 
 @media (max-width: 850px) {

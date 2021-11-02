@@ -18,25 +18,6 @@
     margin-top: 15px;
 }
 
-div.restaurant-details img.restaurant-image {
-    width: 375px;
-    height: 254px;
-    object-fit: cover;
-}
-
-@media (min-width: 375px) {
-    div.restaurant-details img.restaurant-image {
-        width: 100%;
-        height: 396px;
-    }
-}
-
-@media (min-width: 768px) {
-    div.restaurant-details img.restaurant-image {
-        width: 1102px;
-    }
-}
-
 .restaurant-content div.restaurant-details h2 {
     margin: 0 auto;
     color: #000000;
@@ -77,12 +58,5 @@ div.restaurant-details img.restaurant-image {
 
     .restaurant-content div.restaurant-details p {
         font-size: 13.3px;
-    }
-}
-
-@media (max-width: 800px) {
-    .restaurant-content div.res-card img {
-        width: 100%;
-
     }
 }

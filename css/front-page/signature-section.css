@@ -76,6 +76,7 @@ section.signature-section div.dish-details p.details {
     color: #000000;
 }
 
+
 section.signature-section div.dish-details p.price {
     font-family: HelveticaNeue-Thin;
     font-size: 24.9px;
@@ -115,9 +116,6 @@ section.signature-section div.dish-details p.icon-price {
     section.signature-section div.thumbnail-image img {
         height: 208.8px;
         object-fit: cover;
-    }
-    section.signature-section div.dish-details div {
-        height: 100%;
     }
     section.signature-section div.dish-details h2 {
         width: 144.7px;
@@ -193,9 +191,3 @@ section.signature-section div.dish-details p.icon-price {
         scroll-behavior: smooth;
     }
 }
-
-/*@media (max-width: 375px) {*/
-/*    section.signature-section div.dishes-content h2.name {*/
-/*        padding-left: 40px;*/
-/*    }*/
-/*}*/

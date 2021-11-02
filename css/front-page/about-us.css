@@ -76,7 +76,7 @@ div.links {
 div.app-store-link {
     border: 1px solid #000000;
     border-radius: 9.6px;
-    padding: 7.2px 17.6px 8.4px 15px;
+    padding: 7.2px 0 8.4px 15px;
     height: 52.6px;
     display: flex;
     flex-direction: row;
@@ -101,6 +101,7 @@ div.app-store-link p {
     letter-spacing: 1.29px;
     color: #000000;
     font-size: 13.2px;
+    margin: 0 auto;
 
 }
 
@@ -137,6 +138,7 @@ div.google-play-link p {
     line-height: normal;
     letter-spacing: 1.29px;
     color: #000000;
+    margin: 0 auto;
 }
 
 div.google-play-link p a {

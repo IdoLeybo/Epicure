@@ -19,7 +19,7 @@ div.dish-details h2 {
     letter-spacing: 1.5px;
     text-align: center;
     color: #000000;
-    margin-top: 15px;
+    padding: 15px;
     margin-bottom: 10px;
 }
 
@@ -39,7 +39,6 @@ div.dish-details p.details {
 }
 
 div.dish-details p.price {
-    margin-top: 40px;
     margin-bottom: 0;
     font-family: HelveticaNeue;
     font-size: 21px;
@@ -77,6 +76,7 @@ div.dish-details p.icon-price {
     }
 
     div.dish-details h2 {
+        padding: 8px;
         font-size: 15px;
     }
 

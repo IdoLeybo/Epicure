@@ -46,6 +46,7 @@ div.logo {
     flex-direction: row;
     justify-content: space-between;
     max-width: 170px;
+    width: 100%;
     align-items: center;
 
 }

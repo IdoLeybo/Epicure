@@ -40,7 +40,48 @@ button {
     border: none;
     background-color: transparent;
     padding: 0;
+    outline: 0!important;
 
+}
+
+    /** PRICE SECTION IN DISH CARD **/
+div.padDiv {
+    height: 30px;
+    width: 0;
+}
+
+div.line-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+}
+
+div.line {
+    border-bottom: solid 0.5px #979797;
+    width: 33%;
+}
+
+div.dish-details p.price {
+    margin: 0 ;
+}
+
+div.dish-details {
+    max-height: 174px;
+    height: 100%;
+}
+
+div.dishes-content button {
+    max-height: 247px;
+    height: 100%;
+}
+
+@media (max-width: 404px){
+    div.padDiv {
+        height: 38px;
+    }
 }
 
 
