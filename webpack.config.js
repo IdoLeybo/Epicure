@@ -68,8 +68,14 @@ const rules = [
  * @see https://webpack.js.org/configuration/configuration-types/#exporting-a-function
  */
 module.exports = ( env, argv ) => ({
-    entry: entry,
-    output: output,
+    entry: {
+        main: './js/scripts.js',
+        sweetalert: './js/sweetalert2.min.js',
+        adminside: './js/admin_ajax.js',
+    },
+    output: {
+        filename: '[name].bundle.js',
+    },
     /**
      * A full SourceMap is emitted as a separate file ( e.g.  main.js.map )
      * It adds a reference comment to the bundle so development tools know where to find it.
