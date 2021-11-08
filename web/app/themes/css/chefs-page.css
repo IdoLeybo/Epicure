@@ -1,0 +1,44 @@
+/** CHEFS PAGE **/
+.chef-title {
+    margin: 30px auto;
+}
+div.chefs-container {
+    justify-content: space-evenly;
+}
+
+div.chef-content {
+    box-sizing: border-box;
+    padding: 19px 19px;
+    background-color: #f9f4ea;
+    border-radius: 5px;
+    margin-bottom: 19px;
+    height: 420px;
+}
+
+div.chef-card img {
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 550px) {
+    div.chef-content {
+        margin-right: 10px;
+        padding: 10px;
+    }
+    div.chefs-container {
+        flex-wrap: unset;
+        justify-content: unset;
+    }
+
+    div.chefs-container {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    div.chefs-container > div {
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
+    }
+}

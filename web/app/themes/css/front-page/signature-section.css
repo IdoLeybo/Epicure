@@ -1,0 +1,193 @@
+/** SIGNATURE SECTION **/
+section.signature-section {
+    margin-top: 100px;
+    text-align: center;
+}
+
+section.signature-section h1 {
+    font-family: HelveticaNeue-Thin;
+    font-size: 30px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: 1.25px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+section.signature-section div.dishes-content {
+    margin: 0 6.5px 6.5px;
+    width: 360px;
+    height: 654px;
+}
+section.signature-section div.signature-dish h2.name {
+    margin: 0 auto 8px;
+    font-family: HelveticaNeue;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.77px;
+    text-align: center;
+    color: #000000;
+}
+
+section.signature-section div.dish-card {
+    width: 100%;
+    height: 100%;
+    margin: 0 0;
+}
+
+section.signature-section div.thumbnail-image img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+}
+
+section.signature-section div.dish-details h2 {
+    width: 201px;
+    height: 94.8px;
+    margin: 15px auto;
+    font-family: HelveticaNeue;
+    font-size: 38.4px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: 2.56px;
+    text-align: center;
+    color: #000000;
+}
+
+section.signature-section div.dish-details p.details {
+    width: 291.5px;
+    height: 154.8px;
+    font-family: HelveticaNeue-Thin;
+    font-size: 24px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 1.6px;
+    text-align: center;
+    color: #000000;
+}
+
+
+section.signature-section div.dish-details p.price {
+    font-family: HelveticaNeue-Thin;
+    font-size: 24.9px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.66px;
+    color: #000000;
+    margin: 0;
+}
+
+section.signature-section div.dish-details p.icon-price {
+    font-family: HelveticaNeue-Thin;
+    font-size: 24.9px;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.66px;
+    color: #000000;
+}
+
+@media (max-width: 785px) {
+    section.signature-section div.dishes-content {
+        height: 470.9px;
+        width: 259.2px;
+    }
+    section.signature-section h1 {
+        font-size: 14px;
+    }
+    section.signature-section div.dish-card {
+        flex-shrink: 0;
+        height: 470.9px;
+        width: 259.2px;
+    }
+    section.signature-section div.thumbnail-image img {
+        height: 208.8px;
+        object-fit: cover;
+    }
+    section.signature-section div.dish-details h2 {
+        width: 144.7px;
+        height: 80px;
+        font-family: HelveticaNeue;
+        font-size: 27.6px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.23;
+        letter-spacing: 1.84px;
+        text-align: center;
+        color: #000000;
+        margin: 10px auto 0;
+    }
+    section.signature-section div.dish-details p.details {
+        width: 215.4px!important;
+        height: 100px;
+        font-family: HelveticaNeue-Thin;
+        font-size: 17.3px;
+        font-weight: 100;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: 1.15px;
+        text-align: center;
+        color: #000000;
+        align-items: center;
+    }
+    section.signature-section div.dish-details p.price {
+        font-size: 25px;
+        margin-top: 0;
+    }
+
+    section.signature-section div.dishes-content h2.name {
+        width: 248px;
+        height: 19px;
+        font-family: HelveticaNeue;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.94px;
+        color: #000000;
+        text-align: center;
+        margin-top: -70px;
+    }
+
+
+}
+
+@media (max-width: 550px) {
+    section.signature-section {
+        margin-top: 20px;
+    }
+    section.signature-section .container-flex {
+        flex-wrap: unset;
+        justify-content: unset;
+    }
+    section.signature-section a span {
+        display: none;
+    }
+    section.signature-section div.slider {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    section.signature-section div.slides > div {
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
+    }
+}
