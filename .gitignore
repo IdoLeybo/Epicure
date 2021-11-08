@@ -18,9 +18,5 @@ web/.htaccess
 .env.*
 !.env.example
 
-# Composer
-vendor/*
-!vendor/.gitkeep
-
 # WP-CLI
 wp-cli.local.yml
