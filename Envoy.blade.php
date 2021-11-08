@@ -1,58 +1,81 @@
 @setup
 
-
 $repo = 'git@github.com:IdoLeybo/Epicure.git';
 $branch = $branch = isset($branch) ? $branch : "main";
+
 date_default_timezone_set('Europe/Berlin');
 $deploy_date = date('YmdHis');
+
+$theme_dir = 'web/app/themes/epicure';
 $appDir = '/var/www/html';
 $baseDir = '/home/ubuntu';
 $releasesDir = '/home/ubuntu/releases';
-$newReleaseName = date('Ymd-His');
-$newReleaseDir = "{$releasesDir}/{$newReleaseName}";
+
+$newReleaseDir = "{$releasesDir}/{$deploy_date}";
 $release = 'release_' . $deploy_date;
 
 $serve = $appDir . '/current';
 
+$servers = ['local' => '127.0.0.1', 'prod1' => 'ubuntu@54.211.82.235'];
+
+if( $target === 'prod1'){
+echo 'Deploy to production';
+$global_uploads_dir = $shared_drive . 'uploads';
+}
+
+if (!isset($branch)){
+$branch = 'develop';
+}
+
 @endsetup
 
-@servers(['local' => '127.0.0.1', 'production' => ['ubuntu@3.85.61.83']])
-
-@task('dir')
-mkdir "envoy-test"
-@endtask
+@servers($servers)
 
 
 
-
-@task('clone_git')
-
-[ -d {{ $releasesDir }} ] || sudo mkdir {{ $releasesDir }};
-cd {{ $releasesDir }};
-echo "Deployment ({{ $date }}) started";
-git clone --single-branch -b  {{$branch}} {{ $repo }} {{ $release }};
-echo "Repository cloned";
-{{--[ -d {{ $releasesDir }} ] || sudo mkdir {{ $releasesDir }};--}}
-{{--cd {{ $releasesDir }};--}}
-{{--git clone --single-branch -b  {{$branch}} {{ $repo }} {{ $release }};--}}
-@endtask
-
-@story('deploy', ['on' => 'production'])
-clone_git
+@story('deploy-local', ['on' => $target])
+    dir
 @endstory
 
 
+@story('deploy')
+    upload_compiled_assets
+    clone_repo
+    install
+@endstory
+
+@task('upload_compiled_assets', ['on' => 'local'])
+cd {{ $theme_dir }}
+tar -czf assets-{{ $release }}.tar.gz dist
+scp assets-{{  $release }}.tar.gz {{ $servers[$target] }}:~
+rm -rf assets-{{  $release }}.tar.gz
+
+{{--wp plugin list --format=json > ./plugins-export.json--}}
+{{--scp ./plugins-export.json {{ $servers[$target] }}:~--}}
+{{--rm ./plugins-export.json--}}
+@endtask
+
+@task('clone_repo', [ 'on' => $target ])
+    [ -d {{ $releasesDir }} ] || sudo mkdir {{ $releasesDir }};
+    sudo chmod 777 {{ $releasesDir }}
+    cd {{ $releasesDir }};
+    echo "Deployment ({{ $deploy_date }}) started";
+    git clone --single-branch -b  {{$branch}} {{ $repo }} {{ $release }};
+    echo "Repository cloned";
+@endtask
 
 
-
-
-@task('install')
+@task('install', [ 'on' => $target ])
+    cd releases/{{ $release }};
+    cp ~/.env .
+    composer install --prefer-dist;
 @endtask
 
 @task('deployment_cleanup')
+echo 'Installing compiled assets...'
+cd ~
+tar -xzf assets-{{ $release }}.tar.gz -C {{ $release_dir }}/{{ $release }}/{{ $theme_dir }}
+sudo rm -rf assets-{{ $release }}.tar.gz
 @endtask
 
-@story('deploy-local', ['on' => 'local'])
-dir
-@endstory
 
