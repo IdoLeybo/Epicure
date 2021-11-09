@@ -1,0 +1,47 @@
+/** SUBMIT FORM **/
+div.submit-modal-content {
+    height: 75vh;
+}
+
+div.submit-body {
+    height: 100%;
+}
+
+div.submit-info {
+    height: 100%;
+}
+
+form.submit-form {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+}
+
+form.submit-form div.field {
+    align-items: center;
+    height: 16.66667%;
+}
+
+form.submit-form div.field input {
+    margin: 20px auto;
+    width: 300px;
+    height: 52px;
+}
+
+form.submit-form div.field textarea {
+    margin: 20px auto;
+    width: 300px;
+}
+
+input.submit-button {
+    width: 20%;
+    background-color: #d7efe2;
+    padding: 10px;
+    font-size: 20px;
+    margin: 30px auto;
+    font-family: HelveticaNeue;
+    border: none;
+    border-radius: 5px
+;
+}

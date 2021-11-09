@@ -1,0 +1,94 @@
+/** MOBILE MENU **/
+div.mobile-dialog {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+div.mobile-menu-header {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+}
+
+div.mobile-menu-header button.close {
+    color: #000000;
+    margin: 0 0 0 10px;
+}
+
+div.mobile-menu-body {
+    text-align: center;
+    height: 30%;
+}
+
+div.mobile-menu-body nav {
+    height: 90%;
+}
+
+div.mobile-menu-body ul.menu {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 60px 0 0;
+}
+
+div.mobile-menu-body ul.menu li {
+    height: 25%;
+    font-size: 20px;
+}
+
+div.border-menu {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 0.2px solid #000000;
+}
+
+div.mobile-menu-footer {
+    text-align: center;
+    margin: 30px 0 0;
+    height: 60%;
+}
+
+div.mobile-menu-footer ul.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    height: 50%;
+}
+
+div.mobile-menu-footer nav {
+    height: 60%;
+}
+
+div.mobile-menu-footer ul.menu li {
+    font-size: 20px;
+    opacity: 0.3;
+}
+
+div.mobile-menu-footer ul.menu li:hover {
+    opacity: 1;
+}
+
+
+@media only screen and (min-width: 768px) {
+    div.main-menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    div.main-menu {
+        display: block;
+    }
+}
