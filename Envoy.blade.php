@@ -42,12 +42,15 @@ $branch = 'develop';
     upload_compiled_assets
     clone_repo
     install
+    deployment_cleanup
 @endstory
 
 @task('upload_compiled_assets', ['on' => 'local'])
 cd {{ $theme_dir }}
+{{--npm run production--}}
 tar -czf assets-{{ $release }}.tar.gz dist
 scp assets-{{  $release }}.tar.gz {{ $servers[$target] }}:~
+{{--scp ./build/version-hash.txt {{ $servers[$target] }}:~--}}
 rm -rf assets-{{  $release }}.tar.gz
 
 {{--wp plugin list --format=json > ./plugins-export.json--}}
@@ -68,14 +71,22 @@ rm -rf assets-{{  $release }}.tar.gz
 @task('install', [ 'on' => $target ])
     cd releases/{{ $release }};
     cp ~/.env .
-    composer install --prefer-dist;
+{{--    composer init--}}
+    composer install --no-dev;
+    echo "Install finished"
 @endtask
 
-@task('deployment_cleanup')
-echo 'Installing compiled assets...'
-cd ~
-tar -xzf assets-{{ $release }}.tar.gz -C {{ $release_dir }}/{{ $release }}/{{ $theme_dir }}
-sudo rm -rf assets-{{ $release }}.tar.gz
+@task('deployment_cleanup', [ 'on' => $target ])
+    echo 'Installing compiled assets...'
+    cd ~
+{{--    tar -xzf assets-{{ $release }}.tar.gz -C {{ $release_dir }}/{{ $release }}--}}
+    {{--/{{ $theme_dir }}--}}
+    sudo rm -r assets-{{ $release }}.tar.gz
+
+    echo 'Updating symlinks...'
+    sudo ln -nfs {{ $release_dir }}/{{ $release }} {{ $app_dir }}
+
+    echo 'Deployment to {{$target}} finished successfully.'
 @endtask
 
 
