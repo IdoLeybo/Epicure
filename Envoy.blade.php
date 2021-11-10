@@ -32,12 +32,6 @@ $branch = 'develop';
 @servers($servers)
 
 
-
-@story('deploy-local', ['on' => $target])
-    dir
-@endstory
-
-
 @story('deploy')
     upload_compiled_assets
     clone_repo
@@ -67,6 +61,7 @@ rm ./plugins-export.json
 @endtask
 
 
+
 @task('install', [ 'on' => $target ])
 echo "Install starting..."
     cd {{ $releasesDir }}/{{ $release }};
@@ -75,11 +70,11 @@ echo "Install starting..."
     echo "Install finished"
 @endtask
 
+
 @task('deployment_cleanup', [ 'on' => $target ])
     echo 'Installing compiled assets...'
     cd ~
-{{--    tar -xzf assets-{{ $release }}.tar.gz -C {{ $release_dir }}/{{ $release }}--}}
-    {{--/{{ $theme_dir }}--}}
+    tar -xzf assets-{{ $release }}.tar.gz -C {{ $release_dir }}/{{ $release }}{{ $theme_dir }}
     sudo rm -r assets-{{ $release }}.tar.gz
 
     echo 'Setting permissions...'
