@@ -10,11 +10,11 @@ $theme_dir = 'web/app/themes/epicure';
 $appDir = '/var/www/html';
 $baseDir = '/home/ubuntu';
 $releasesDir = '/home/ubuntu/releases';
-
-$newReleaseDir = "{$releasesDir}/{$deploy_date}";
 $release = 'release_' . $deploy_date;
 
+$newReleaseDir = "{$releasesDir}/{$deploy_date}";
 $serve = $appDir . '/current';
+
 
 $servers = ['local' => '127.0.0.1', 'prod1' => 'ubuntu@54.211.82.235'];
 
@@ -50,12 +50,11 @@ cd {{ $theme_dir }}
 {{--npm run production--}}
 tar -czf assets-{{ $release }}.tar.gz dist
 scp assets-{{  $release }}.tar.gz {{ $servers[$target] }}:~
-{{--scp ./build/version-hash.txt {{ $servers[$target] }}:~--}}
 rm -rf assets-{{  $release }}.tar.gz
 
-{{--wp plugin list --format=json > ./plugins-export.json--}}
-{{--scp ./plugins-export.json {{ $servers[$target] }}:~--}}
-{{--rm ./plugins-export.json--}}
+wp plugin list --format=json > ./plugins-export.json
+scp ./plugins-export.json {{ $servers[$target] }}:~
+rm ./plugins-export.json
 @endtask
 
 @task('clone_repo', [ 'on' => $target ])
@@ -69,9 +68,9 @@ rm -rf assets-{{  $release }}.tar.gz
 
 
 @task('install', [ 'on' => $target ])
-    cd releases/{{ $release }};
+echo "Install starting..."
+    cd {{ $releasesDir }}/{{ $release }};
     cp ~/.env .
-{{--    composer init--}}
     composer install --no-dev;
     echo "Install finished"
 @endtask
@@ -83,8 +82,14 @@ rm -rf assets-{{  $release }}.tar.gz
     {{--/{{ $theme_dir }}--}}
     sudo rm -r assets-{{ $release }}.tar.gz
 
+    echo 'Setting permissions...'
+
+    cd {{ $releasesDir }};
+    sudo chmod -R ug+rwx {{ $release }};
+    sudo chgrp -R www-data {{ $release }};
+
     echo 'Updating symlinks...'
-    sudo ln -nfs {{ $release_dir }}/{{ $release }} {{ $app_dir }}
+    sudo ln -n -f -s {{ $releasesDir }}/{{ $release }}/* /var/www/html
 
     echo 'Deployment to {{$target}} finished successfully.'
 @endtask
