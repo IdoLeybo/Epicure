@@ -44,6 +44,35 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/envoy" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nesbot" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oscarotero" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/roots" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/voku" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/mu-plugins/bedrock-disallow-indexing" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/advanced-custom-fields" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/classic-editor" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/contact-form-7" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/regenerate-thumbnails" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/ultimate-member" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/2021" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/pum" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/ultimatemember" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/wpcf7_uploads" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/wpforms" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/upgrade" />
+      <excludeFolder url="file://$MODULE_DIR$/web/wp" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
