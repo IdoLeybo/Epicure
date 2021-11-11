@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
     // ----- Function To Filter The Restaurants Page ------ //
     $('.myHref').on('click', function(event) {
         event.preventDefault();
-        window.location = `http://bedrock-local.co.il/allrestaurants/#${event.target.id}`
+        window.location = `${process.env.WP_HOME}/allrestaurants/#${event.target.id}`
 
         const all = document.getElementById("all-Div");
         const newDiv = document.getElementById("new-Div");
