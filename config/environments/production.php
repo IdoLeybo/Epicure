@@ -2,9 +2,11 @@
 /**
  * Configuration overrides for WP_ENV === 'production'
  */
-ini_set('display_errors', 0);
-define('WP_DEBUG_DISPLAY', false);
-define('SCRIPT_DEBUG', false);
+use Roots\WPConfig\Config;
 
-define('PATH_CURRENT_SITE', '/');
-define( 'WP_DEFAULT_THEME', 'epicure');
+ini_set('display_errors', 0);
+Config::define('WP_DEBUG_DISPLAY', false);
+Config::define('SCRIPT_DEBUG', false);
+
+Config::define('PATH_CURRENT_SITE', '/');
+Config::define( 'WP_DEFAULT_THEME', 'epicure');
