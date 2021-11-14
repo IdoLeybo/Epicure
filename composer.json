@@ -76,6 +76,18 @@
           "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.11.zip"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "regenerate-thumbnails",
+        "version": "3.1.5",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.3.1.5.zip"
+        }
+      }
     }
   ],
   "require": {
@@ -91,7 +103,8 @@
     "wordpress-contributors/classic-editor": "1.6.2",
     "wpackagist-plugin/contact-form-7": "^5.5",
     "wpackagist-plugin/ultimate-member": "^2.2",
-    "wpackagist-plugin/advanced-custom-fields": "5.11"
+    "wpackagist-plugin/advanced-custom-fields": "5.11",
+    "wpackagist-plugin/regenerate-thumbnails": "3.1.5"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6.0",
