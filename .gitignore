@@ -1,6 +1,7 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
+!web/app/plugins/advanced-custom-fields
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
@@ -24,3 +25,6 @@ vendor/*
 
 # WP-CLI
 wp-cli.local.yml
+
+# Dependency directories
+node_modules/
