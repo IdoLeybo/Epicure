@@ -17,7 +17,7 @@
                 changes varchar (100) NOT NULL,
                 quantity varchar (50) NOT NULL,
                 user_name varchar (50),
-                submitted bit DEFAULT 0,
+                submitted BOOL DEFAULT 0,
                 date datetime DEFAULT NULL ,
                 user_id int,
                 PRIMARY KEY (id)
@@ -30,7 +30,7 @@
                 changes varchar (100) NOT NULL,
                 quantity varchar (50) NOT NULL,
                 user_name varchar (50),
-                submitted bit DEFAULT 0,
+                submitted BOOL DEFAULT 0,
                 date datetime DEFAULT NULL ,
                 user_id int,
                 PRIMARY KEY (id)
