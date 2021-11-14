@@ -61,7 +61,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/voku" />
       <excludeFolder url="file://$MODULE_DIR$/web/app/mu-plugins/bedrock-disallow-indexing" />
-      <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/advanced-custom-fields" />
       <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/classic-editor" />
       <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/contact-form-7" />
       <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/regenerate-thumbnails" />
@@ -72,7 +71,6 @@
       <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/wpcf7_uploads" />
       <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/wpforms" />
       <excludeFolder url="file://$MODULE_DIR$/web/app/upgrade" />
-      <excludeFolder url="file://$MODULE_DIR$/web/wp" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
