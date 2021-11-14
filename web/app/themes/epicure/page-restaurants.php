@@ -14,6 +14,7 @@ get_header(); ?>
             <?php $filter3 = get_post_field('filter_3', get_post()) ?>
             <?php $filter4 = get_post_field('filter_4', get_post()) ?>
 
+    
             <div class="controllers text-center">
                 <a href="#" class="myHref">
                     <span id="all" class="text-primary text-center current-filter"><?php echo the_field('filter_1'); ?></span>
