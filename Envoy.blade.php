@@ -16,9 +16,9 @@ $newReleaseDir = "{$releasesDir}/{$deploy_date}";
 $serve = $appDir . '/current';
 
 
-$servers = ['local' => '127.0.0.1', 'prod1' => 'ubuntu@54.211.82.235'];
+$servers = ['local' => '127.0.0.1', 'prod1' => 'ubuntu@54.211.82.235', 'prod2' => 'ubuntu@3.84.241.33'];
 
-if( $target === 'prod1'){
+if( $target === 'prod1' || $target === 'prod2'){
 echo 'Deploy to production';
 $global_uploads_dir = $shared_drive . 'uploads';
 }

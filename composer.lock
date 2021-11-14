@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fae8159f0677698b3293cbfed8b1c12f",
+    "content-hash": "acebebf165dc9dce2dce636a09bc725b",
     "packages": [
         {
             "name": "composer/installers",
@@ -137,15 +137,6 @@
                 "zikula"
             ],
             "time": "2021-04-28T06:42:17+00:00"
-        },
-        {
-            "name": "contact-form-7",
-            "version": "5.5.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.5.2.zip"
-            },
-            "type": "wordpress-plugin"
         },
         {
             "name": "graham-campbell/result-type",
@@ -793,15 +784,6 @@
             "time": "2021-01-07T16:49:33+00:00"
         },
         {
-            "name": "ultimate-member",
-            "version": "2.2.5",
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ultimate-member.2.2.5.zip"
-            },
-            "type": "wordpress-plugin"
-        },
-        {
             "name": "vlucas/phpdotenv",
             "version": "v5.3.0",
             "source": {
@@ -877,6 +859,42 @@
             "type": "wordpress-plugin"
         },
         {
+            "name": "wpackagist-plugin/advanced-custom-fields",
+            "version": "5.11",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "reference": "tags/5.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.5.11.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
+        },
+        {
+            "name": "wpackagist-plugin/contact-form-7",
+            "version": "5.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
+                "reference": "tags/5.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.5.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/contact-form-7/"
+        },
+        {
             "name": "wpackagist-plugin/ultimate-member",
             "version": "2.2.5",
             "source": {
@@ -896,6 +914,15 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "contact-form-7",
+            "version": "5.5.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.5.2.zip"
+            },
+            "type": "wordpress-plugin"
+        },
         {
             "name": "doctrine/inflector",
             "version": "2.0.4",
@@ -2909,6 +2936,15 @@
                 "standards"
             ],
             "time": "2021-03-23T23:28:01+00:00"
+        },
+        {
+            "name": "ultimate-member",
+            "version": "2.2.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ultimate-member.2.2.5.zip"
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "voku/portable-ascii",
