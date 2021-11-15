@@ -15,6 +15,9 @@ $release = 'release_' . $deploy_date;
 $newReleaseDir = "{$releasesDir}/{$deploy_date}";
 $serve = $appDir . '/current';
 
+$global_uploads_dir = '/home/ubuntu/uploads';
+$shared_drive = '/home/ubuntu/epicure-shared-efs/';
+$app_uploads_dir = $app_dir . '/web/app/uploads';
 
 $servers = ['local' => '127.0.0.1', 'prod1' => 'ubuntu@54.211.82.235', 'prod2' => 'ubuntu@3.84.241.33'];
 
@@ -85,6 +88,8 @@ echo "Install starting..."
 
     echo 'Updating symlinks...'
     sudo ln -n -f -s {{ $releasesDir }}/{{ $release }}/* /var/www/html
+{{--    sudo rm -r {{ $app_uploads_dir }}--}}
+{{--    sudo ln -s {{$global_uploads_dir}} {{$app_uploads_dir}}--}}
 
     echo 'Deployment to {{$target}} finished successfully.'
 @endtask
