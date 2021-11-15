@@ -5,7 +5,7 @@ web/app/plugins/*
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
-!web/app/uploads/2021/10
+!web/app/uploads/2021/
 !web/app/uploads/.gitkeep
 
 # WordPress
