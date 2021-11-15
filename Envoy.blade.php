@@ -16,7 +16,7 @@ $newReleaseDir = "{$releasesDir}/{$deploy_date}";
 $serve = $appDir . '/current';
 
 $global_uploads_dir = '/home/ubuntu/uploads';
-$shared_drive = '/home/ubuntu/epicure-shared-efs/';
+$shared_drive = '/home/ubuntu/epicure-prod/';
 $app_uploads_dir = $app_dir . '/web/app/uploads';
 
 $servers = ['local' => '127.0.0.1', 'prod1' => 'ubuntu@54.211.82.235', 'prod2' => 'ubuntu@3.84.241.33'];
@@ -43,6 +43,7 @@ $branch = 'develop';
 @endstory
 
 @task('upload_compiled_assets', ['on' => 'local'])
+echo "Start local..."
 cd {{ $theme_dir }}
 {{--npm run production--}}
 tar -czf assets-{{ $release }}.tar.gz dist
@@ -77,7 +78,7 @@ echo "Install starting..."
 @task('deployment_cleanup', [ 'on' => $target ])
     echo 'Installing compiled assets...'
     cd ~
-    tar -xzf assets-{{ $release }}.tar.gz -C {{ $release_dir }}/{{ $release }}{{ $theme_dir }}
+    tar -xzf assets-{{ $release }}.tar.gz -C {{ $releasesDir }}/{{ $release }}/{{ $theme_dir }}
     sudo rm -r assets-{{ $release }}.tar.gz
 
     echo 'Setting permissions...'
