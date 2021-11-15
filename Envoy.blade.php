@@ -17,13 +17,13 @@ $serve = $appDir . '/current';
 
 $global_uploads_dir = '/home/ubuntu/uploads';
 $shared_drive = '/home/ubuntu/epicure-prod/';
-$app_uploads_dir = $app_dir . '/web/app/uploads';
+$app_uploads_dir = $appDir . '/web/app/uploads';
 
 $servers = ['local' => '127.0.0.1', 'prod1' => 'ubuntu@54.211.82.235', 'prod2' => 'ubuntu@3.84.241.33'];
 
 if( $target === 'prod1' || $target === 'prod2'){
 echo 'Deploy to production';
-$global_uploads_dir = $shared_drive . 'uploads';
+$global_uploads_dir = '/home/ubuntu/uploads';
 }
 
 if (!isset($branch)){
