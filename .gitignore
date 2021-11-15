@@ -28,3 +28,6 @@ wp-cli.local.yml
 
 # Dependency directories
 node_modules/
+
+
+web/app/themes/epicure/dist
