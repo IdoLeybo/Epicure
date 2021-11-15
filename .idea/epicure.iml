@@ -1,7 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate/macroable" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/illuminate" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nesbot" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/oscarotero" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/voku" />
+<<<<<<< HEAD
+      <excludeFolder url="file://$MODULE_DIR$/web/app/mu-plugins/bedrock-disallow-indexing" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/classic-editor" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/contact-form-7" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/regenerate-thumbnails" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/plugins/ultimate-member" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/pum" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/wpforms" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/upgrade" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/wpcf7_uploads" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/ultimatemember" />
+      <excludeFolder url="file://$MODULE_DIR$/web/app/uploads/2021" />
+=======
+>>>>>>> 7930fb093acc819e4473f942f6e66ea6641f321b
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

@@ -1,1 +1,33 @@
-node_modules
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+!web/app/plugins/advanced-custom-fields
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+### Composer
+vendor/*
+!vendor/.gitkeep
+
+# WP-CLI
+wp-cli.local.yml
+
+# Dependency directories
+node_modules/
+
+
+web/app/themes/epicure/dist
